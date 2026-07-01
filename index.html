@@ -1,0 +1,2027 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Tags -->
+  <title>Shuvro Dev | Designer Shuvro | Premium Graphic Designer & Brand Architect Portfolio</title>
+  <meta name="description" content="Portfolio of Shuvro Dev, a luxury graphic designer specializing in branding, high-end packaging, and digital UI/UX experiences. Crafting visual assets for elite global brands.">
+  <meta name="keywords" content="Graphic Designer, Brand Architect, Luxury Design, Packaging Design, UI/UX, Typography, Creative Director, Portfolio, Shuvro Dev, Designer Shuvro">
+  <meta name="author" content="Shuvro Dev">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Shuvro Dev | Designer Shuvro | Premium Graphic Designer & Brand Architect">
+  <meta property="og:description" content="Exploring the intersection of luxury, minimalism, and digital execution. Explore case studies in branding, UI/UX, and print.">
+  <meta property="og:image" content="assets/hero_portrait.jpg">
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:title" content="Shuvro Dev | Designer Shuvro | Premium Graphic Designer">
+  <meta property="twitter:description" content="Luxury branding, high-end packaging, and digital UI/UX experiences.">
+  <meta property="twitter:image" content="assets/hero_portrait.jpg">
+
+  <!-- Google Fonts: Playfair Display (Serif) & Plus Jakarta Sans (Sans-serif) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons for Branding and Actions -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Tailwind CSS v3 CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            accent: {
+              DEFAULT: '#D4AF37', // Gold/Amber accent
+              light: '#F3E5AB',
+              dark: '#AA8513',
+            },
+            darkBg: '#080808',
+            darkCard: '#121212',
+            lightBg: '#F9F9F7',
+            lightCard: '#FFFFFF',
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          },
+          animation: {
+            'marquee-slow': 'marquee 30s linear infinite',
+            'float': 'float 6s ease-in-out infinite',
+            'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+          },
+          keyframes: {
+            marquee: {
+              '0%': { transform: 'translateX(0%)' },
+              '100%': { transform: 'translateX(-50%)' },
+            },
+            float: {
+              '0%, 100%': { transform: 'translateY(0)' },
+              '50%': { transform: 'translateY(-12px)' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom Core Styles -->
+  <style type="text/css">
+    /* Glassmorphism Styles */
+    .glass {
+      background: rgba(255, 255, 255, 0.03);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+    }
+    .dark .glass {
+      background: rgba(10, 10, 10, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    .light .glass {
+      background: rgba(255, 255, 255, 0.7);
+      border: 1px solid rgba(0, 0, 0, 0.05);
+      backdrop-filter: blur(16px);
+    }
+
+    /* Scroll Reveal Initial States */
+    .reveal {
+      opacity: 0;
+      transform: translateY(35px);
+      transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .reveal-left {
+      opacity: 0;
+      transform: translateX(-35px);
+      transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .reveal-left.active {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .reveal-right {
+      opacity: 0;
+      transform: translateX(35px);
+      transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .reveal-right.active {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    /* Floating label form styling */
+    .form-group input:focus ~ label,
+    .form-group input:not(:placeholder-shown) ~ label,
+    .form-group textarea:focus ~ label,
+    .form-group textarea:not(:placeholder-shown) ~ label,
+    .form-group select:focus ~ label,
+    .form-group select:not([value=""]):valid ~ label {
+      transform: translateY(-1.25rem) scale(0.85);
+      color: #D4AF37;
+    }
+
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #080808;
+    }
+    .light ::-webkit-scrollbar-track {
+      background: #F9F9F7;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #D4AF37;
+      border-radius: 3px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #AA8513;
+    }
+
+    /* Dynamic text cursor */
+    .typed-cursor {
+      animation: blink 0.8s infinite;
+    }
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+
+    /* Marquee fade overlay */
+    .marquee-container {
+      position: relative;
+      overflow: hidden;
+    }
+    .marquee-container::before,
+    .marquee-container::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      width: 15%;
+      height: 100%;
+      z-index: 2;
+      pointer-events: none;
+    }
+    .dark .marquee-container::before {
+      background: linear-gradient(to right, #080808, transparent);
+      left: 0;
+    }
+    .dark .marquee-container::after {
+      background: linear-gradient(to left, #080808, transparent);
+      right: 0;
+    }
+    .light .marquee-container::before {
+      background: linear-gradient(to right, #F9F9F7, transparent);
+      left: 0;
+    }
+    .light .marquee-container::after {
+      background: linear-gradient(to left, #F9F9F7, transparent);
+      right: 0;
+    }
+  </style>
+</head>
+<body class="bg-lightBg text-neutral-800 dark:bg-darkBg dark:text-neutral-100 transition-colors duration-500 antialiased font-sans">
+
+  <!-- Section 1: Sticky Navbar -->
+  <nav id="navbar" class="fixed top-0 left-0 w-full z-40 transition-all duration-300 border-b border-transparent">
+    <div class="max-w-7xl mx-auto px-6 md:px-12 py-5 flex items-center justify-between">
+      <!-- Logo -->
+      <a href="#" class="text-xl md:text-2xl font-serif font-bold tracking-widest text-neutral-900 dark:text-white hover:text-accent dark:hover:text-accent transition-colors duration-300">
+        D.SHUVRO<span class="text-accent font-sans">.</span>
+      </a>
+      
+      <!-- Desktop Navigation Menu -->
+      <div class="hidden lg:flex items-center space-x-10 text-xs font-semibold uppercase tracking-widest">
+        <a href="#about" class="hover:text-accent transition-colors duration-300">About</a>
+        <a href="#services" class="hover:text-accent transition-colors duration-300">Services</a>
+        <a href="#works" class="hover:text-accent transition-colors duration-300">Works</a>
+        <a href="#process" class="hover:text-accent transition-colors duration-300">Process</a>
+        <a href="#pricing" class="hover:text-accent transition-colors duration-300">Pricing</a>
+        <a href="#faq" class="hover:text-accent transition-colors duration-300">FAQ</a>
+        <a href="#blog" class="hover:text-accent transition-colors duration-300">Journal</a>
+        <a href="#contact" class="hover:text-accent transition-colors duration-300">Contact</a>
+      </div>
+
+      <!-- Action Utilities -->
+      <div class="flex items-center space-x-4 md:space-x-6">
+        <!-- Theme Toggle Switch -->
+        <button id="theme-toggle" class="p-2.5 rounded-full hover:bg-neutral-200 dark:hover:bg-neutral-800 transition-colors duration-300 text-neutral-600 dark:text-neutral-300 focus:outline-none" aria-label="Toggle theme mode">
+          <i class="fa-regular fa-moon text-lg dark:hidden"></i>
+          <i class="fa-regular fa-sun text-lg hidden dark:block"></i>
+        </button>
+
+        <!-- Dynamic CTA Button -->
+        <a href="#contact" class="hidden sm:inline-block px-6 py-2.5 bg-neutral-900 hover:bg-accent text-white hover:text-neutral-950 dark:bg-white dark:hover:bg-accent dark:text-neutral-950 dark:hover:text-neutral-950 text-xs font-bold tracking-widest uppercase rounded-full transition-all duration-300">
+          Enquire
+        </a>
+
+        <!-- Mobile Drawer Menu Toggle -->
+        <button id="mobile-menu-btn" class="lg:hidden p-2.5 text-neutral-800 dark:text-white focus:outline-none" aria-label="Toggle Navigation Menu">
+          <i class="fa-solid fa-bars-staggered text-2xl"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Drawer Menu Overlay -->
+  <div id="mobile-menu" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-md opacity-0 pointer-events-none transition-all duration-300 flex justify-end">
+    <div class="w-full max-w-sm bg-lightBg dark:bg-darkBg h-full p-8 flex flex-col justify-between shadow-2xl transition-transform duration-500 translate-x-full">
+      <div>
+        <div class="flex items-center justify-between mb-16">
+          <span class="text-xl font-serif font-bold tracking-widest text-neutral-950 dark:text-white">D.SHUVRO</span>
+          <button id="mobile-close-btn" class="p-2 hover:text-accent transition-colors duration-300" aria-label="Close menu">
+            <i class="fa-solid fa-xmark text-2xl"></i>
+          </button>
+        </div>
+        <div class="flex flex-col space-y-6 text-lg font-serif tracking-wider">
+          <a href="#about" class="mobile-link hover:text-accent transition-colors duration-300">About</a>
+          <a href="#services" class="mobile-link hover:text-accent transition-colors duration-300">Services</a>
+          <a href="#works" class="mobile-link hover:text-accent transition-colors duration-300">Works</a>
+          <a href="#process" class="mobile-link hover:text-accent transition-colors duration-300">Process</a>
+          <a href="#pricing" class="mobile-link hover:text-accent transition-colors duration-300">Pricing</a>
+          <a href="#faq" class="mobile-link hover:text-accent transition-colors duration-300">FAQ</a>
+          <a href="#blog" class="mobile-link hover:text-accent transition-colors duration-300">Journal</a>
+          <a href="#contact" class="mobile-link hover:text-accent transition-colors duration-300">Contact</a>
+        </div>
+      </div>
+      <div class="border-t border-neutral-200 dark:border-neutral-800 pt-6">
+        <p class="text-xs uppercase tracking-widest text-neutral-400 dark:text-neutral-500 mb-4">Let's Connect</p>
+        <div class="flex space-x-5 text-lg">
+          <a href="#" class="hover:text-accent transition-colors duration-300"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" class="hover:text-accent transition-colors duration-300"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#" class="hover:text-accent transition-colors duration-300"><i class="fa-brands fa-behance"></i></a>
+          <a href="#" class="hover:text-accent transition-colors duration-300"><i class="fa-brands fa-dribbble"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section 2: Hero Section -->
+  <header id="hero" class="relative min-h-screen flex items-center justify-center pt-24 pb-16 overflow-hidden">
+    <!-- Grid Overlay Background -->
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(212,175,55,0.08),rgba(255,255,255,0))] dark:bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(212,175,55,0.05),rgba(0,0,0,0))] pointer-events-none"></div>
+    
+    <div class="max-w-7xl mx-auto px-6 md:px-12 w-full grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center relative z-10">
+      
+      <!-- Text details -->
+      <div class="lg:col-span-7 flex flex-col justify-center text-center lg:text-left reveal-left active">
+        <span class="inline-block px-4 py-1.5 rounded-full border border-accent/25 text-accent text-xs font-bold tracking-widest uppercase mb-6 mx-auto lg:mx-0 max-w-fit">
+          Creative Design Studio &copy;2026
+        </span>
+        
+        <h1 class="text-4xl sm:text-5xl md:text-6xl xl:text-7xl font-serif font-bold leading-[1.1] tracking-tight text-neutral-900 dark:text-white mb-6">
+          Architect of <br class="hidden sm:inline">
+          <span class="text-accent italic font-normal">Luxury</span> Brands & <br>
+          <span id="typed-text" class="border-r-2 border-accent pr-1"></span><span class="typed-cursor text-accent">|</span>
+        </h1>
+        
+        <p class="text-base sm:text-lg text-neutral-600 dark:text-neutral-400 max-w-xl mx-auto lg:mx-0 mb-8 leading-relaxed font-light">
+          Crafting premium visual landscapes, packaging couture, and cutting-edge digital experiences for brands that command authority and demand perfection.
+        </p>
+        
+        <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start space-y-4 sm:space-y-0 sm:space-x-5">
+          <a href="#works" class="w-full sm:w-auto text-center px-8 py-4 bg-accent hover:bg-accent-dark text-neutral-950 font-bold tracking-widest text-xs uppercase rounded-full shadow-lg shadow-accent/20 hover:shadow-none hover:translate-y-0.5 transition-all duration-300">
+            View Portfolios
+          </a>
+          <a href="#contact" class="w-full sm:w-auto text-center px-8 py-4 bg-transparent border border-neutral-300 dark:border-neutral-800 hover:border-accent hover:text-accent font-bold tracking-widest text-xs uppercase rounded-full transition-all duration-300">
+            Let's Collaborate
+          </a>
+        </div>
+
+        <!-- Float stats overlay for design detail -->
+        <div class="grid grid-cols-3 gap-6 pt-12 mt-12 border-t border-neutral-200 dark:border-neutral-900 max-w-md mx-auto lg:mx-0">
+          <div>
+            <p class="text-2xl font-serif font-bold text-neutral-900 dark:text-white">08+</p>
+            <p class="text-[10px] tracking-widest text-neutral-400 dark:text-neutral-500 uppercase font-bold">Years Practice</p>
+          </div>
+          <div>
+            <p class="text-2xl font-serif font-bold text-neutral-900 dark:text-white">120+</p>
+            <p class="text-[10px] tracking-widest text-neutral-400 dark:text-neutral-500 uppercase font-bold">Global Clients</p>
+          </div>
+          <div>
+            <p class="text-2xl font-serif font-bold text-neutral-900 dark:text-white">15</p>
+            <p class="text-[10px] tracking-widest text-neutral-400 dark:text-neutral-500 uppercase font-bold">Awards Won</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Designer Portrait with parallax container -->
+      <div class="lg:col-span-5 flex justify-center lg:justify-end reveal-right active">
+        <div class="relative w-full max-w-sm sm:max-w-md aspect-[3/4] group">
+          <!-- Geometric back borders -->
+          <div class="absolute -inset-4 border border-accent/20 rounded-3xl -z-10 group-hover:scale-[1.02] transition-transform duration-700"></div>
+          <div class="absolute inset-0 border border-neutral-200 dark:border-neutral-800 rounded-3xl -z-10 transform rotate-2 group-hover:rotate-0 transition-transform duration-700"></div>
+          
+          <!-- Image frame -->
+          <div class="w-full h-full rounded-3xl overflow-hidden shadow-2xl relative">
+            <img src="assets/hero_portrait.jpg" alt="Alexandre Sterling Portrait" class="w-full h-full object-cover grayscale hover:grayscale-0 scale-100 hover:scale-105 transition-all duration-[1.2s] ease-out">
+            <!-- Absolute floating tags for aesthetic detailing -->
+            <div class="absolute bottom-6 left-6 right-6 p-5 glass rounded-2xl flex items-center justify-between opacity-95">
+              <div>
+                <p class="text-white text-sm font-semibold tracking-wide">Shuvro Dev</p>
+                <p class="text-accent text-[10px] tracking-wider uppercase font-bold">Creative Director</p>
+              </div>
+              <div class="w-10 h-10 rounded-full bg-accent/20 border border-accent/40 flex items-center justify-center text-accent">
+                <i class="fa-solid fa-signature"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Section 3: Marquee clients/tools -->
+  <section class="py-10 bg-neutral-100/50 dark:bg-neutral-950/20 border-y border-neutral-200/50 dark:border-neutral-900/50 marquee-container">
+    <div class="max-w-full overflow-hidden flex whitespace-nowrap">
+      <div class="flex space-x-16 text-xs md:text-sm font-semibold uppercase tracking-[0.25em] text-neutral-400 dark:text-neutral-500 select-none animate-marquee-slow">
+        <!-- Set 1 -->
+        <span>CHANEL</span>
+        <span class="text-accent"><i class="fa-solid fa-circle text-[6px]"></i></span>
+        <span>VOGUE MAGAZINE</span>
+        <span class="text-accent"><i class="fa-solid fa-circle text-[6px]"></i></span>
+        <span>ADOBE CREATIVE</span>
+        <span class="text-accent"><i class="fa-solid fa-circle text-[6px]"></i></span>
+        <span>FIGMA ARCHITECT</span>
+        <span class="text-accent"><i class="fa-solid fa-circle text-[6px]"></i></span>
+        <span>AUDI LUXURY</span>
+        <span class="text-accent"><i class="fa-solid fa-circle text-[6px]"></i></span>
+        <span>APPLE DESIGN</span>
+        <span class="text-accent"><i class="fa-solid fa-circle text-[6px]"></i></span>
+        <span>ROLEX WATCHES</span>
+        <span class="text-accent"><i class="fa-solid fa-circle text-[6px]"></i></span>
+        <span>GIVENCHY</span>
+        <span class="text-accent"><i class="fa-solid fa-circle text-[6px]"></i></span>
+        
+        <!-- Set 2 (duplicates for loop wrapping) -->
+        <span>CHANEL</span>
+        <span class="text-accent"><i class="fa-solid fa-circle text-[6px]"></i></span>
+        <span>VOGUE MAGAZINE</span>
+        <span class="text-accent"><i class="fa-solid fa-circle text-[6px]"></i></span>
+        <span>ADOBE CREATIVE</span>
+        <span class="text-accent"><i class="fa-solid fa-circle text-[6px]"></i></span>
+        <span>FIGMA ARCHITECT</span>
+        <span class="text-accent"><i class="fa-solid fa-circle text-[6px]"></i></span>
+        <span>AUDI LUXURY</span>
+        <span class="text-accent"><i class="fa-solid fa-circle text-[6px]"></i></span>
+        <span>APPLE DESIGN</span>
+        <span class="text-accent"><i class="fa-solid fa-circle text-[6px]"></i></span>
+        <span>ROLEX WATCHES</span>
+        <span class="text-accent"><i class="fa-solid fa-circle text-[6px]"></i></span>
+        <span>GIVENCHY</span>
+        <span class="text-accent"><i class="fa-solid fa-circle text-[6px]"></i></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4: About Section -->
+  <section id="about" class="py-24 md:py-32 relative">
+    <div class="max-w-7xl mx-auto px-6 md:px-12">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+        
+        <!-- Left Side: Large Title & Concept -->
+        <div class="lg:col-span-5 reveal">
+          <span class="text-accent text-xs font-bold tracking-widest uppercase mb-3 block">01 / DISCOVER</span>
+          <h2 class="text-3xl md:text-4xl xl:text-5xl font-serif font-bold text-neutral-900 dark:text-white leading-tight mb-8">
+            Minimalism is not the <br class="hidden md:inline">
+            lack of something. It is the <br>
+            <span class="text-accent italic font-normal">perfect quantity</span> of it.
+          </h2>
+          
+          <div class="relative max-w-sm rounded-2xl overflow-hidden aspect-[4/3] group shadow-lg">
+            <!-- Mini grid graphic -->
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-10"></div>
+            <img src="assets/logo_design.jpg" alt="Minimalist detail" class="w-full h-full object-cover grayscale scale-100 group-hover:scale-105 transition-transform duration-700">
+            <div class="absolute bottom-5 left-5 z-20">
+              <span class="text-accent text-[10px] uppercase font-bold tracking-widest">Brand Philosophy</span>
+              <p class="text-white text-xs font-light mt-1">Simplicity communicates elegance clearly.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Side: Detailed Story & Interactive Stats Counters -->
+        <div class="lg:col-span-7 space-y-8 reveal lg:pt-10">
+          <p class="text-xl text-neutral-700 dark:text-neutral-300 font-light leading-relaxed">
+            I am Shuvro Dev (Designer Shuvro), a graphic designer and brand architect working from my studio in Zurich. Over the past decade, I have refined my signature layout style: high-contrast typography, large spacing layouts, and rich textures.
+          </p>
+          <p class="text-base text-neutral-600 dark:text-neutral-400 font-light leading-relaxed">
+            I believe branding is an emotional architecture. Whether I am modeling a cosmetic bottle, mapping an interactive app layout, or arranging custom serif letters, my goal is to strip away the noise until only the premium, luxury essence remains.
+          </p>
+          
+          <!-- Signature Block -->
+          <div class="flex items-center space-x-6 py-4">
+            <div class="text-5xl font-serif text-accent italic">S. Dev</div>
+            <div>
+              <p class="text-xs uppercase font-bold tracking-widest text-neutral-500">Shuvro Dev</p>
+              <p class="text-[10px] uppercase text-neutral-400">Founder & Chief Designer</p>
+            </div>
+          </div>
+
+          <!-- Dynamic Counters Grid -->
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-6 pt-8 border-t border-neutral-200 dark:border-neutral-950">
+            <!-- Counter Item -->
+            <div class="counter-box">
+              <span class="text-3xl md:text-4xl font-serif font-bold text-neutral-900 dark:text-white block mb-1">
+                <span class="counter" data-target="8">0</span>+
+              </span>
+              <span class="text-xs text-neutral-400 dark:text-neutral-500 tracking-wider uppercase">Years Practiced</span>
+            </div>
+            <!-- Counter Item -->
+            <div class="counter-box">
+              <span class="text-3xl md:text-4xl font-serif font-bold text-neutral-900 dark:text-white block mb-1">
+                <span class="counter" data-target="120">0</span>+
+              </span>
+              <span class="text-xs text-neutral-400 dark:text-neutral-500 tracking-wider uppercase">Global Clients</span>
+            </div>
+            <!-- Counter Item -->
+            <div class="counter-box">
+              <span class="text-3xl md:text-4xl font-serif font-bold text-neutral-900 dark:text-white block mb-1">
+                <span class="counter" data-target="15">0</span>
+              </span>
+              <span class="text-xs text-neutral-400 dark:text-neutral-500 tracking-wider uppercase">Awards Won</span>
+            </div>
+            <!-- Counter Item -->
+            <div class="counter-box">
+              <span class="text-3xl md:text-4xl font-serif font-bold text-neutral-900 dark:text-white block mb-1">
+                <span class="counter" data-target="99">0</span>%
+              </span>
+              <span class="text-xs text-neutral-400 dark:text-neutral-500 tracking-wider uppercase">Client Love</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 5: Services Section -->
+  <section id="services" class="py-24 md:py-32 bg-neutral-100/30 dark:bg-neutral-950/10 border-y border-neutral-200 dark:border-neutral-900">
+    <div class="max-w-7xl mx-auto px-6 md:px-12">
+      
+      <!-- Section Header -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 reveal">
+        <div>
+          <span class="text-accent text-xs font-bold tracking-widest uppercase mb-3 block">02 / EXPERTISE</span>
+          <h2 class="text-3xl md:text-4xl font-serif font-bold text-neutral-900 dark:text-white leading-tight">
+            Premium Creative Services
+          </h2>
+        </div>
+        <p class="text-sm text-neutral-500 dark:text-neutral-400 max-w-md mt-4 md:mt-0 font-light">
+          A bespoke approach to artistic identity, aligning elegant typography and structural hierarchy to tell your brand story.
+        </p>
+      </div>
+
+      <!-- Services Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Service Card 1 -->
+        <div class="glass p-8 md:p-10 rounded-3xl hover:border-accent/40 group transition-all duration-300 hover:-translate-y-1 shadow-md reveal">
+          <div class="w-12 h-12 rounded-2xl bg-neutral-200/50 dark:bg-neutral-900/50 flex items-center justify-center text-accent text-xl mb-8 group-hover:bg-accent group-hover:text-neutral-950 transition-colors duration-300">
+            <i class="fa-solid fa-pen-nib"></i>
+          </div>
+          <span class="text-xs font-bold text-neutral-400 tracking-widest uppercase block mb-2">01. BRAND ARCHITECTURE</span>
+          <h3 class="text-xl font-serif font-bold text-neutral-900 dark:text-white mb-4">Branding & Logo Systems</h3>
+          <p class="text-sm text-neutral-600 dark:text-neutral-400 font-light leading-relaxed">
+            Minimalist and luxury emblem design, custom monogramming, brand voice guidelines, and bespoke typography systems that define the brand core.
+          </p>
+        </div>
+
+        <!-- Service Card 2 -->
+        <div class="glass p-8 md:p-10 rounded-3xl hover:border-accent/40 group transition-all duration-300 hover:-translate-y-1 shadow-md reveal">
+          <div class="w-12 h-12 rounded-2xl bg-neutral-200/50 dark:bg-neutral-900/50 flex items-center justify-center text-accent text-xl mb-8 group-hover:bg-accent group-hover:text-neutral-950 transition-colors duration-300">
+            <i class="fa-solid fa-cubes"></i>
+          </div>
+          <span class="text-xs font-bold text-neutral-400 tracking-widest uppercase block mb-2">02. STRUCTURAL DESIGN</span>
+          <h3 class="text-xl font-serif font-bold text-neutral-900 dark:text-white mb-4">Couture Packaging</h3>
+          <p class="text-sm text-neutral-600 dark:text-neutral-400 font-light leading-relaxed">
+            High-end cosmetic bottle mocks, luxury retail bags, spirits packaging, custom die-cuts, and eco-luxury paper material consultation.
+          </p>
+        </div>
+
+        <!-- Service Card 3 -->
+        <div class="glass p-8 md:p-10 rounded-3xl hover:border-accent/40 group transition-all duration-300 hover:-translate-y-1 shadow-md reveal">
+          <div class="w-12 h-12 rounded-2xl bg-neutral-200/50 dark:bg-neutral-900/50 flex items-center justify-center text-accent text-xl mb-8 group-hover:bg-accent group-hover:text-neutral-950 transition-colors duration-300">
+            <i class="fa-solid fa-laptop-code"></i>
+          </div>
+          <span class="text-xs font-bold text-neutral-400 tracking-widest uppercase block mb-2">03. DIGITAL SYSTEMS</span>
+          <h3 class="text-xl font-serif font-bold text-neutral-900 dark:text-white mb-4">Interactive UI/UX</h3>
+          <p class="text-sm text-neutral-600 dark:text-neutral-400 font-light leading-relaxed">
+            Clean web application dashboards, luxury e-commerce interfaces, responsive portfolio frameworks, and design system creation in Figma.
+          </p>
+        </div>
+
+        <!-- Service Card 4 -->
+        <div class="glass p-8 md:p-10 rounded-3xl hover:border-accent/40 group transition-all duration-300 hover:-translate-y-1 shadow-md reveal">
+          <div class="w-12 h-12 rounded-2xl bg-neutral-200/50 dark:bg-neutral-900/50 flex items-center justify-center text-accent text-xl mb-8 group-hover:bg-accent group-hover:text-neutral-950 transition-colors duration-300">
+            <i class="fa-solid fa-newspaper"></i>
+          </div>
+          <span class="text-xs font-bold text-neutral-400 tracking-widest uppercase block mb-2">04. EDITORIAL DESIGN</span>
+          <h3 class="text-xl font-serif font-bold text-neutral-900 dark:text-white mb-4">Print & Editorial Layouts</h3>
+          <p class="text-sm text-neutral-600 dark:text-neutral-400 font-light leading-relaxed">
+            Swiss design typography exhibition posters, luxury booklets, corporate reports, fashion magazines, and print production supervision.
+          </p>
+        </div>
+
+        <!-- Service Card 5 -->
+        <div class="glass p-8 md:p-10 rounded-3xl hover:border-accent/40 group transition-all duration-300 hover:-translate-y-1 shadow-md reveal">
+          <div class="w-12 h-12 rounded-2xl bg-neutral-200/50 dark:bg-neutral-900/50 flex items-center justify-center text-accent text-xl mb-8 group-hover:bg-accent group-hover:text-neutral-950 transition-colors duration-300">
+            <i class="fa-solid fa-hashtag"></i>
+          </div>
+          <span class="text-xs font-bold text-neutral-400 tracking-widest uppercase block mb-2">05. CAMPAIGN CURATION</span>
+          <h3 class="text-xl font-serif font-bold text-neutral-900 dark:text-white mb-4">Social Media Direction</h3>
+          <p class="text-sm text-neutral-600 dark:text-neutral-400 font-light leading-relaxed">
+            Editorial Instagram layouts, premium dynamic templates, static grid curation, content assets development, and luxury aesthetic audits.
+          </p>
+        </div>
+
+        <!-- Service Card 6 -->
+        <div class="glass p-8 md:p-10 rounded-3xl hover:border-accent/40 group transition-all duration-300 hover:-translate-y-1 shadow-md reveal">
+          <div class="w-12 h-12 rounded-2xl bg-neutral-200/50 dark:bg-neutral-900/50 flex items-center justify-center text-accent text-xl mb-8 group-hover:bg-accent group-hover:text-neutral-950 transition-colors duration-300">
+            <i class="fa-solid fa-compass"></i>
+          </div>
+          <span class="text-xs font-bold text-neutral-400 tracking-widest uppercase block mb-2">06. CONSULTING</span>
+          <h3 class="text-xl font-serif font-bold text-neutral-900 dark:text-white mb-4">Aesthetic Audits & Strategy</h3>
+          <p class="text-sm text-neutral-600 dark:text-neutral-400 font-light leading-relaxed">
+            In-depth analysis of existing brand collateral, identifying visual inconsistencies, and prescribing typographic adjustments.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Section 6: Skills Section (Animated Progress Bars) -->
+  <section id="skills" class="py-24 md:py-32">
+    <div class="max-w-7xl mx-auto px-6 md:px-12">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left Side Text content -->
+        <div class="lg:col-span-5 reveal-left">
+          <span class="text-accent text-xs font-bold tracking-widest uppercase mb-3 block">03 / CAPABILITIES</span>
+          <h2 class="text-3xl md:text-4xl font-serif font-bold text-neutral-900 dark:text-white mb-6 leading-tight">
+            Refined Technical Skillset
+          </h2>
+          <p class="text-base text-neutral-600 dark:text-neutral-400 font-light leading-relaxed mb-6">
+            A designer's excellence lies in the balance of theory and tool proficiency. Over my career, I've built a mastery of editorial grid structures, micro-typography settings, and premium rendering software.
+          </p>
+          <a href="#contact" class="inline-flex items-center text-xs font-bold tracking-widest uppercase text-accent hover:text-accent-dark transition-colors duration-300">
+            Learn more about workflow <i class="fa-solid fa-arrow-right ml-2 text-[10px]"></i>
+          </a>
+        </div>
+
+        <!-- Right Side: Animated Bars -->
+        <div class="lg:col-span-7 space-y-6 reveal-right">
+          <!-- Skill 1 -->
+          <div>
+            <div class="flex justify-between items-center mb-2">
+              <span class="text-xs font-bold uppercase tracking-wider">Typography & Layout Grid</span>
+              <span class="text-xs font-bold text-accent">95%</span>
+            </div>
+            <div class="w-full h-1.5 bg-neutral-200 dark:bg-neutral-900 rounded-full overflow-hidden">
+              <div class="skill-progress-bar h-full bg-accent w-0 transition-all duration-[2s] ease-out" data-width="95%"></div>
+            </div>
+          </div>
+
+          <!-- Skill 2 -->
+          <div>
+            <div class="flex justify-between items-center mb-2">
+              <span class="text-xs font-bold uppercase tracking-wider">Brand Identity Systems</span>
+              <span class="text-xs font-bold text-accent">90%</span>
+            </div>
+            <div class="w-full h-1.5 bg-neutral-200 dark:bg-neutral-900 rounded-full overflow-hidden">
+              <div class="skill-progress-bar h-full bg-accent w-0 transition-all duration-[2s] ease-out" data-width="90%"></div>
+            </div>
+          </div>
+
+          <!-- Skill 3 -->
+          <div>
+            <div class="flex justify-between items-center mb-2">
+              <span class="text-xs font-bold uppercase tracking-wider">UX/UI Digital Architecture</span>
+              <span class="text-xs font-bold text-accent">85%</span>
+            </div>
+            <div class="w-full h-1.5 bg-neutral-200 dark:bg-neutral-900 rounded-full overflow-hidden">
+              <div class="skill-progress-bar h-full bg-accent w-0 transition-all duration-[2s] ease-out" data-width="85%"></div>
+            </div>
+          </div>
+
+          <!-- Skill 4 -->
+          <div>
+            <div class="flex justify-between items-center mb-2">
+              <span class="text-xs font-bold uppercase tracking-wider">Luxury Packaging Mockups</span>
+              <span class="text-xs font-bold text-accent">90%</span>
+            </div>
+            <div class="w-full h-1.5 bg-neutral-200 dark:bg-neutral-900 rounded-full overflow-hidden">
+              <div class="skill-progress-bar h-full bg-accent w-0 transition-all duration-[2s] ease-out" data-width="90%"></div>
+            </div>
+          </div>
+
+          <!-- Skill 5 -->
+          <div>
+            <div class="flex justify-between items-center mb-2">
+              <span class="text-xs font-bold uppercase tracking-wider">Figma & Adobe Creative Suite</span>
+              <span class="text-xs font-bold text-accent">98%</span>
+            </div>
+            <div class="w-full h-1.5 bg-neutral-200 dark:bg-neutral-900 rounded-full overflow-hidden">
+              <div class="skill-progress-bar h-full bg-accent w-0 transition-all duration-[2s] ease-out" data-width="98%"></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 7: Portfolio Gallery Section -->
+  <section id="works" class="py-24 md:py-32 bg-neutral-100/30 dark:bg-neutral-950/10 border-t border-neutral-200 dark:border-neutral-900">
+    <div class="max-w-7xl mx-auto px-6 md:px-12">
+      
+      <!-- Section Title & Filter Nav -->
+      <div class="flex flex-col items-center text-center mb-16 reveal">
+        <span class="text-accent text-xs font-bold tracking-widest uppercase mb-3">04 / FOLIO SHOWCASE</span>
+        <h2 class="text-3xl md:text-4xl font-serif font-bold text-neutral-900 dark:text-white mb-8">Selected Creative Works</h2>
+        
+        <!-- Interactive Category Filters -->
+        <div id="gallery-filters" class="flex flex-wrap justify-center gap-2 max-w-2xl bg-neutral-200/50 dark:bg-neutral-900/50 p-1.5 rounded-full text-[10px] font-bold uppercase tracking-wider border border-neutral-300/40 dark:border-neutral-800/40">
+          <button class="filter-btn active px-5 py-2.5 rounded-full hover:text-neutral-900 dark:hover:text-white transition-colors duration-300" data-filter="all">All Works</button>
+          <button class="filter-btn px-5 py-2.5 rounded-full hover:text-neutral-900 dark:hover:text-white transition-colors duration-300" data-filter="logo">Logo</button>
+          <button class="filter-btn px-5 py-2.5 rounded-full hover:text-neutral-900 dark:hover:text-white transition-colors duration-300" data-filter="branding">Branding</button>
+          <button class="filter-btn px-5 py-2.5 rounded-full hover:text-neutral-900 dark:hover:text-white transition-colors duration-300" data-filter="packaging">Packaging</button>
+          <button class="filter-btn px-5 py-2.5 rounded-full hover:text-neutral-900 dark:hover:text-white transition-colors duration-300" data-filter="uiux">UI/UX</button>
+          <button class="filter-btn px-5 py-2.5 rounded-full hover:text-neutral-900 dark:hover:text-white transition-colors duration-300" data-filter="print">Print</button>
+          <button class="filter-btn px-5 py-2.5 rounded-full hover:text-neutral-900 dark:hover:text-white transition-colors duration-300" data-filter="social">Social Media</button>
+        </div>
+      </div>
+
+      <!-- Portfolio Grid -->
+      <div id="gallery-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Portfolio Card 1 (Logo) -->
+        <div class="gallery-item show group relative rounded-3xl overflow-hidden glass shadow-lg transition-all duration-500 hover:-translate-y-1.5 border border-black/5 dark:border-white/5" data-category="logo">
+          <!-- Image Container -->
+          <div class="relative overflow-hidden aspect-[4/3] bg-neutral-200 dark:bg-neutral-900">
+            <img src="assets/logo_design.jpg" alt="Aurelia Brandmark" class="w-full h-full object-cover grayscale group-hover:grayscale-0 scale-100 group-hover:scale-105 transition-all duration-700 ease-out">
+            <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center z-10">
+              <button class="lightbox-trigger w-12 h-12 rounded-full bg-white text-neutral-950 flex items-center justify-center shadow-lg hover:scale-110 transition-transform duration-300" data-image="assets/logo_design.jpg" data-title="Aurelia Brandmark" data-desc="Minimalist luxury geometry logo drafted for a modern luxury resort brand.">
+                <i class="fa-solid fa-expand text-lg"></i>
+              </button>
+            </div>
+            <span class="absolute top-4 left-4 z-20 px-3.5 py-1 bg-black/60 text-accent text-[9px] uppercase tracking-widest font-bold rounded-full backdrop-blur-md">Logo</span>
+          </div>
+          <!-- Card Info -->
+          <div class="p-6">
+            <h3 class="text-lg font-serif font-bold text-neutral-900 dark:text-white mb-2">Aurelia Brandmark</h3>
+            <p class="text-xs text-neutral-500 dark:text-neutral-400 font-light mb-5">Minimalist luxury layout detailing geometric brandmark assets.</p>
+            <button class="project-details-btn text-xs font-bold uppercase tracking-widest text-accent hover:text-accent-dark transition-colors duration-300" data-image="assets/logo_design.jpg" data-title="Aurelia Brandmark" data-desc="Aurelia was designed for an elite boutique resort group in Switzerland. The concept fuses architectural arches with a modern serif ligature, utilizing gold foil embossed printing parameters.">
+              View Project <i class="fa-solid fa-arrow-right ml-1 text-[9px]"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Portfolio Card 2 (Branding) -->
+        <div class="gallery-item show group relative rounded-3xl overflow-hidden glass shadow-lg transition-all duration-500 hover:-translate-y-1.5 border border-black/5 dark:border-white/5" data-category="branding">
+          <div class="relative overflow-hidden aspect-[4/3] bg-neutral-200 dark:bg-neutral-900">
+            <img src="assets/branding_design.jpg" alt="Elysian Stationery Identity" class="w-full h-full object-cover grayscale group-hover:grayscale-0 scale-100 group-hover:scale-105 transition-all duration-700 ease-out">
+            <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center z-10">
+              <button class="lightbox-trigger w-12 h-12 rounded-full bg-white text-neutral-950 flex items-center justify-center shadow-lg hover:scale-110 transition-transform duration-300" data-image="assets/branding_design.jpg" data-title="Elysian Stationery Identity" data-desc="Complete corporate stationery layout with embossed gold detail elements.">
+                <i class="fa-solid fa-expand text-lg"></i>
+              </button>
+            </div>
+            <span class="absolute top-4 left-4 z-20 px-3.5 py-1 bg-black/60 text-accent text-[9px] uppercase tracking-widest font-bold rounded-full backdrop-blur-md">Branding</span>
+          </div>
+          <div class="p-6">
+            <h3 class="text-lg font-serif font-bold text-neutral-900 dark:text-white mb-2">Elysian Stationery Identity</h3>
+            <p class="text-xs text-neutral-500 dark:text-neutral-400 font-light mb-5">High-end corporate letterheads, cardstocks, and packaging boxes.</p>
+            <button class="project-details-btn text-xs font-bold uppercase tracking-widest text-accent hover:text-accent-dark transition-colors duration-300" data-image="assets/branding_design.jpg" data-title="Elysian Stationery Identity" data-desc="Elysian is a luxury property holding group. The branding guidelines prescribe heavy dark grey cotton paper stocks coupled with precise gold hot-stamping configurations.">
+              View Project <i class="fa-solid fa-arrow-right ml-1 text-[9px]"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Portfolio Card 3 (Packaging) -->
+        <div class="gallery-item show group relative rounded-3xl overflow-hidden glass shadow-lg transition-all duration-500 hover:-translate-y-1.5 border border-black/5 dark:border-white/5" data-category="packaging">
+          <div class="relative overflow-hidden aspect-[4/3] bg-neutral-200 dark:bg-neutral-900">
+            <img src="assets/packaging_design.jpg" alt="Noir Organic Cosmetic Bottle" class="w-full h-full object-cover grayscale group-hover:grayscale-0 scale-100 group-hover:scale-105 transition-all duration-700 ease-out">
+            <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center z-10">
+              <button class="lightbox-trigger w-12 h-12 rounded-full bg-white text-neutral-950 flex items-center justify-center shadow-lg hover:scale-110 transition-transform duration-300" data-image="assets/packaging_design.jpg" data-title="Noir Organic Cosmetic Bottle" data-desc="Premium dark cosmetic flask label concept layout.">
+                <i class="fa-solid fa-expand text-lg"></i>
+              </button>
+            </div>
+            <span class="absolute top-4 left-4 z-20 px-3.5 py-1 bg-black/60 text-accent text-[9px] uppercase tracking-widest font-bold rounded-full backdrop-blur-md">Packaging</span>
+          </div>
+          <div class="p-6">
+            <h3 class="text-lg font-serif font-bold text-neutral-900 dark:text-white mb-2">Noir Cosmetic Flask</h3>
+            <p class="text-xs text-neutral-500 dark:text-neutral-400 font-light mb-5">Typographic label and material consulting for organic skin products.</p>
+            <button class="project-details-btn text-xs font-bold uppercase tracking-widest text-accent hover:text-accent-dark transition-colors duration-300" data-image="assets/packaging_design.jpg" data-title="Noir Cosmetic Flask" data-desc="Designed for Noir Botanical Labs. The packaging balances dark violet glass (which protects organic content) with structured white typographic label panels in bold Swiss styling.">
+              View Project <i class="fa-solid fa-arrow-right ml-1 text-[9px]"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Portfolio Card 4 (UI/UX) -->
+        <div class="gallery-item show group relative rounded-3xl overflow-hidden glass shadow-lg transition-all duration-500 hover:-translate-y-1.5 border border-black/5 dark:border-white/5" data-category="uiux">
+          <div class="relative overflow-hidden aspect-[4/3] bg-neutral-200 dark:bg-neutral-900">
+            <img src="assets/ui_ux_design.jpg" alt="Apex Crypto Mobile Portal" class="w-full h-full object-cover grayscale group-hover:grayscale-0 scale-100 group-hover:scale-105 transition-all duration-700 ease-out">
+            <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center z-10">
+              <button class="lightbox-trigger w-12 h-12 rounded-full bg-white text-neutral-950 flex items-center justify-center shadow-lg hover:scale-110 transition-transform duration-300" data-image="assets/ui_ux_design.jpg" data-title="Apex Crypto Mobile Portal" data-desc="Modern high-contrast crypto trading dashboard mobile view.">
+                <i class="fa-solid fa-expand text-lg"></i>
+              </button>
+            </div>
+            <span class="absolute top-4 left-4 z-20 px-3.5 py-1 bg-black/60 text-accent text-[9px] uppercase tracking-widest font-bold rounded-full backdrop-blur-md">UI/UX</span>
+          </div>
+          <div class="p-6">
+            <h3 class="text-lg font-serif font-bold text-neutral-900 dark:text-white mb-2">Apex Crypto Mobile Portal</h3>
+            <p class="text-xs text-neutral-500 dark:text-neutral-400 font-light mb-5">A glassmorphic crypto charting tool using bold accent UI blocks.</p>
+            <button class="project-details-btn text-xs font-bold uppercase tracking-widest text-accent hover:text-accent-dark transition-colors duration-300" data-image="assets/ui_ux_design.jpg" data-title="Apex Crypto Mobile Portal" data-desc="A high-fidelity mobile application layout. Fuses modern dark design with neon violet grid indicators, keeping core transactional controls within easy thumb-reach.">
+              View Project <i class="fa-solid fa-arrow-right ml-1 text-[9px]"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Portfolio Card 5 (Print) -->
+        <div class="gallery-item show group relative rounded-3xl overflow-hidden glass shadow-lg transition-all duration-500 hover:-translate-y-1.5 border border-black/5 dark:border-white/5" data-category="print">
+          <div class="relative overflow-hidden aspect-[4/3] bg-neutral-200 dark:bg-neutral-900">
+            <img src="assets/print_poster.jpg" alt="Helvetica Typography Poster" class="w-full h-full object-cover grayscale group-hover:grayscale-0 scale-100 group-hover:scale-105 transition-all duration-700 ease-out">
+            <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center z-10">
+              <button class="lightbox-trigger w-12 h-12 rounded-full bg-white text-neutral-950 flex items-center justify-center shadow-lg hover:scale-110 transition-transform duration-300" data-image="assets/print_poster.jpg" data-title="Helvetica Typography Poster" data-desc="Swiss typography gallery poster, printed on heavy matte stock.">
+                <i class="fa-solid fa-expand text-lg"></i>
+              </button>
+            </div>
+            <span class="absolute top-4 left-4 z-20 px-3.5 py-1 bg-black/60 text-accent text-[9px] uppercase tracking-widest font-bold rounded-full backdrop-blur-md">Print</span>
+          </div>
+          <div class="p-6">
+            <h3 class="text-lg font-serif font-bold text-neutral-900 dark:text-white mb-2">Helvetica Typography Poster</h3>
+            <p class="text-xs text-neutral-500 dark:text-neutral-400 font-light mb-5">Bold typographic poster designed on a structured dynamic grid.</p>
+            <button class="project-details-btn text-xs font-bold uppercase tracking-widest text-accent hover:text-accent-dark transition-colors duration-300" data-image="assets/print_poster.jpg" data-title="Helvetica Typography Poster" data-desc="Created for an architectural design expo. Demonstrates classic Swiss grid design layouts, highlighting red block accents against stark black-and-white visual hierarchy.">
+              View Project <i class="fa-solid fa-arrow-right ml-1 text-[9px]"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Portfolio Card 6 (Social Media) -->
+        <div class="gallery-item show group relative rounded-3xl overflow-hidden glass shadow-lg transition-all duration-500 hover:-translate-y-1.5 border border-black/5 dark:border-white/5" data-category="social">
+          <div class="relative overflow-hidden aspect-[4/3] bg-neutral-200 dark:bg-neutral-900">
+            <img src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?q=80&w=800&auto=format&fit=crop" alt="Vera Luxury Campaign Grid" class="w-full h-full object-cover grayscale group-hover:grayscale-0 scale-100 group-hover:scale-105 transition-all duration-700 ease-out">
+            <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center z-10">
+              <button class="lightbox-trigger w-12 h-12 rounded-full bg-white text-neutral-950 flex items-center justify-center shadow-lg hover:scale-110 transition-transform duration-300" data-image="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?q=80&w=800&auto=format&fit=crop" data-title="Vera Campaign Grid" data-desc="Instagram visual art grid curation mapping for high-fashion perfume line.">
+                <i class="fa-solid fa-expand text-lg"></i>
+              </button>
+            </div>
+            <span class="absolute top-4 left-4 z-20 px-3.5 py-1 bg-black/60 text-accent text-[9px] uppercase tracking-widest font-bold rounded-full backdrop-blur-md">Social Media</span>
+          </div>
+          <div class="p-6">
+            <h3 class="text-lg font-serif font-bold text-neutral-900 dark:text-white mb-2">Vera Campaign Grid</h3>
+            <p class="text-xs text-neutral-500 dark:text-neutral-400 font-light mb-5">Editorial digital asset grids balancing photography and minimal text.</p>
+            <button class="project-details-btn text-xs font-bold uppercase tracking-widest text-accent hover:text-accent-dark transition-colors duration-300" data-image="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?q=80&w=800&auto=format&fit=crop" data-title="Vera Campaign Grid" data-desc="Designed for Vera Couture. Curates Instagram templates, IG stories, and social banners using a strict warm-grey tone layout system to match seasonal fashion releases.">
+              View Project <i class="fa-solid fa-arrow-right ml-1 text-[9px]"></i>
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Section 8: Featured Case Studies Section -->
+  <section class="py-24 md:py-32">
+    <div class="max-w-7xl mx-auto px-6 md:px-12">
+      
+      <!-- Section Header -->
+      <div class="mb-16 reveal">
+        <span class="text-accent text-xs font-bold tracking-widest uppercase mb-3 block">05 / CASE STUDY Deep Dive</span>
+        <h2 class="text-3xl md:text-4xl font-serif font-bold text-neutral-900 dark:text-white">Featured Project deep-dive</h2>
+      </div>
+
+      <!-- Case Study Item -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center bg-neutral-100/50 dark:bg-neutral-900/30 p-6 md:p-12 rounded-[2.5rem] border border-black/5 dark:border-white/5 reveal">
+        <!-- Large Image -->
+        <div class="lg:col-span-6 rounded-2xl overflow-hidden aspect-[4/3] relative group">
+          <img src="assets/branding_design.jpg" alt="Case Study Layout" class="w-full h-full object-cover grayscale group-hover:grayscale-0 scale-100 group-hover:scale-102 transition-all duration-700">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-8">
+            <div>
+              <p class="text-accent text-xs uppercase font-bold tracking-widest">Elysian Group</p>
+              <h3 class="text-white font-serif text-2xl font-bold mt-1">Rebranding an Empire</h3>
+            </div>
+          </div>
+        </div>
+        <!-- Text details -->
+        <div class="lg:col-span-6 space-y-6">
+          <span class="inline-block px-3 py-1 bg-accent/10 border border-accent/30 text-accent text-[9px] uppercase font-bold tracking-widest rounded-full">Branding + Print Production</span>
+          <h3 class="text-2xl md:text-3xl font-serif font-bold text-neutral-900 dark:text-white">Luxury Property Rebranding</h3>
+          <p class="text-sm text-neutral-600 dark:text-neutral-400 font-light leading-relaxed">
+            Elysian requested a complete rebranding to appeal to ultra-high-net-worth real estate buyers in major European capitals.
+          </p>
+          <div class="grid grid-cols-3 gap-6 pt-4 border-t border-neutral-200 dark:border-neutral-800">
+            <div>
+              <h4 class="text-accent font-serif text-xl font-bold">THE BRIEF</h4>
+              <p class="text-[10px] text-neutral-400 dark:text-neutral-500 uppercase font-bold">Ultra-luxury repositioning</p>
+            </div>
+            <div>
+              <h4 class="text-accent font-serif text-xl font-bold">THE WORK</h4>
+              <p class="text-[10px] text-neutral-400 dark:text-neutral-500 uppercase font-bold">Logo, stationery, guide books</p>
+            </div>
+            <div>
+              <h4 class="text-accent font-serif text-xl font-bold">+28%</h4>
+              <p class="text-[10px] text-neutral-400 dark:text-neutral-500 uppercase font-bold">Lead generation increase</p>
+            </div>
+          </div>
+          <p class="text-xs text-neutral-500 dark:text-neutral-400 font-light italic">
+            "Shuvro did not just design a logo; he redesigned the visual grammar of our entire company." — Marcus Vance, Director at Elysian.
+          </p>
+          <div class="pt-4">
+            <button class="project-details-btn px-6 py-3 bg-neutral-900 hover:bg-accent text-white hover:text-neutral-950 dark:bg-white dark:hover:bg-accent dark:text-neutral-950 dark:hover:text-neutral-950 text-xs font-bold tracking-widest uppercase rounded-full transition-all duration-300" data-image="assets/branding_design.jpg" data-title="Elysian Group Case Study" data-desc="The complete layout system for Elysian Property Holdings involved custom grid patterns for high-gloss print lookbooks, custom monogramming debossed on luxury paper stocks, and a dark-mode website mockup with subtle gold-accent scroll triggers.">
+              Read Full Case Study
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Section 9: Design Process Section -->
+  <section id="process" class="py-24 md:py-32 bg-neutral-100/30 dark:bg-neutral-950/10 border-y border-neutral-200 dark:border-neutral-900">
+    <div class="max-w-7xl mx-auto px-6 md:px-12">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-2xl mx-auto mb-20 reveal">
+        <span class="text-accent text-xs font-bold tracking-widest uppercase mb-3 block">06 / METHODOLOGY</span>
+        <h2 class="text-3xl md:text-4xl font-serif font-bold text-neutral-900 dark:text-white mb-4">Structured Design Process</h2>
+        <p class="text-sm text-neutral-500 dark:text-neutral-400 font-light">
+          Translating raw brand aspirations into strict guidelines and structural collateral. My framework guarantees premium precision.
+        </p>
+      </div>
+
+      <!-- Process Steps Timeline -->
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 relative">
+        
+        <!-- Step 1 -->
+        <div class="glass p-8 rounded-3xl border border-black/5 dark:border-white/5 relative group hover:border-accent/30 transition-colors duration-300 reveal">
+          <span class="text-neutral-300 dark:text-neutral-800 text-6xl font-serif font-extrabold absolute top-4 right-6 group-hover:text-accent/20 transition-colors duration-300">01</span>
+          <div class="w-10 h-10 rounded-xl bg-accent/10 flex items-center justify-center text-accent text-sm mb-6">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+          <h3 class="text-lg font-serif font-bold text-neutral-900 dark:text-white mb-3">Discovery & Research</h3>
+          <p class="text-xs text-neutral-500 dark:text-neutral-400 font-light leading-relaxed">
+            I audit your current visual positioning, research key luxury competitors, and establish a creative mood board.
+          </p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="glass p-8 rounded-3xl border border-black/5 dark:border-white/5 relative group hover:border-accent/30 transition-colors duration-300 reveal">
+          <span class="text-neutral-300 dark:text-neutral-800 text-6xl font-serif font-extrabold absolute top-4 right-6 group-hover:text-accent/20 transition-colors duration-300">02</span>
+          <div class="w-10 h-10 rounded-xl bg-accent/10 flex items-center justify-center text-accent text-sm mb-6">
+            <i class="fa-solid fa-bezier-curve"></i>
+          </div>
+          <h3 class="text-lg font-serif font-bold text-neutral-900 dark:text-white mb-3">Concept & Sketching</h3>
+          <p class="text-xs text-neutral-500 dark:text-neutral-400 font-light leading-relaxed">
+            I draft primary logotypes, map structural layouts, and test typographic pairings in pure high-contrast configurations.
+          </p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="glass p-8 rounded-3xl border border-black/5 dark:border-white/5 relative group hover:border-accent/30 transition-colors duration-300 reveal">
+          <span class="text-neutral-300 dark:text-neutral-800 text-6xl font-serif font-extrabold absolute top-4 right-6 group-hover:text-accent/20 transition-colors duration-300">03</span>
+          <div class="w-10 h-10 rounded-xl bg-accent/10 flex items-center justify-center text-accent text-sm mb-6">
+            <i class="fa-solid fa-pen-fancy"></i>
+          </div>
+          <h3 class="text-lg font-serif font-bold text-neutral-900 dark:text-white mb-3">Refinement</h3>
+          <p class="text-xs text-neutral-500 dark:text-neutral-400 font-light leading-relaxed">
+            We review the directions, refine the favorite route, build out the brand collateral (packaging, stationary, UI frames), and tweak kerning details.
+          </p>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="glass p-8 rounded-3xl border border-black/5 dark:border-white/5 relative group hover:border-accent/30 transition-colors duration-300 reveal">
+          <span class="text-neutral-300 dark:text-neutral-800 text-6xl font-serif font-extrabold absolute top-4 right-6 group-hover:text-accent/20 transition-colors duration-300">04</span>
+          <div class="w-10 h-10 rounded-xl bg-accent/10 flex items-center justify-center text-accent text-sm mb-6">
+            <i class="fa-solid fa-rocket"></i>
+          </div>
+          <h3 class="text-lg font-serif font-bold text-neutral-900 dark:text-white mb-3">Delivery & Support</h3>
+          <p class="text-xs text-neutral-500 dark:text-neutral-400 font-light leading-relaxed">
+            I bundle print-ready vectors, export packaging blueprints, compile asset guidelines, and coordinate print production vendors.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Section 10: Experience Section -->
+  <section class="py-24 md:py-32">
+    <div class="max-w-7xl mx-auto px-6 md:px-12">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+        <!-- Left Title -->
+        <div class="lg:col-span-5 reveal-left">
+          <span class="text-accent text-xs font-bold tracking-widest uppercase mb-3 block">07 / EVOLUTION</span>
+          <h2 class="text-3xl md:text-4xl font-serif font-bold text-neutral-900 dark:text-white mb-6">Professional Timeline</h2>
+          <p class="text-sm text-neutral-600 dark:text-neutral-400 font-light leading-relaxed max-w-sm">
+            Over a decade of leading visual teams, defining packaging layouts, and consulting with elite luxury houses.
+          </p>
+        </div>
+
+        <!-- Right Timeline -->
+        <div class="lg:col-span-7 space-y-12 relative border-l border-neutral-200 dark:border-neutral-900 pl-8 reveal-right">
+          
+          <!-- Experience item 1 -->
+          <div class="relative">
+            <!-- Timeline dot indicator -->
+            <div class="absolute -left-[37px] top-1.5 w-4 h-4 rounded-full bg-accent border-4 border-lightBg dark:border-darkBg"></div>
+            <span class="text-[10px] uppercase font-bold tracking-widest text-accent">2024 - PRESENT</span>
+            <h3 class="text-xl font-serif font-bold text-neutral-900 dark:text-white mt-1">Creative Director & Founder</h3>
+            <p class="text-xs font-bold text-neutral-400 uppercase tracking-wide">Studio Shuvro — Zurich</p>
+            <p class="text-xs text-neutral-500 dark:text-neutral-400 font-light leading-relaxed mt-3">
+              Directing creative campaigns, establishing luxury monograms, packaging guidelines, and premium e-commerce design frameworks for clients globally.
+            </p>
+          </div>
+
+          <!-- Experience item 2 -->
+          <div class="relative">
+            <div class="absolute -left-[37px] top-1.5 w-4 h-4 rounded-full bg-neutral-300 dark:bg-neutral-800 border-4 border-lightBg dark:border-darkBg transition-colors duration-300"></div>
+            <span class="text-[10px] uppercase font-bold tracking-widest text-neutral-400">2021 - 2024</span>
+            <h3 class="text-xl font-serif font-bold text-neutral-900 dark:text-white mt-1">Senior Brand Architect</h3>
+            <p class="text-xs font-bold text-neutral-400 uppercase tracking-wide">Luxury House NYC — New York</p>
+            <p class="text-xs text-neutral-500 dark:text-neutral-400 font-light leading-relaxed mt-3">
+              Led visual teams in rebranding high-end real estate, directing perfume bottle mockups, and crafting Swiss typographic print grids.
+            </p>
+          </div>
+
+          <!-- Experience item 3 -->
+          <div class="relative">
+            <div class="absolute -left-[37px] top-1.5 w-4 h-4 rounded-full bg-neutral-300 dark:bg-neutral-800 border-4 border-lightBg dark:border-darkBg"></div>
+            <span class="text-[10px] uppercase font-bold tracking-widest text-neutral-400">2018 - 2021</span>
+            <h3 class="text-xl font-serif font-bold text-neutral-900 dark:text-white mt-1">Lead Interactive Designer</h3>
+            <p class="text-xs font-bold text-neutral-400 uppercase tracking-wide">Berlin Visual Lab — Berlin</p>
+            <p class="text-xs text-neutral-500 dark:text-neutral-400 font-light leading-relaxed mt-3">
+              Designed glassmorphic web dashboards, customized serif typefaces for digital apps, and supervised branding deployment.
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Section 11: Awards & Certifications Section -->
+  <section class="py-24 md:py-32 bg-neutral-100/30 dark:bg-neutral-950/10 border-y border-neutral-200 dark:border-neutral-900">
+    <div class="max-w-7xl mx-auto px-6 md:px-12">
+      
+      <!-- Title -->
+      <div class="text-center max-w-2xl mx-auto mb-16 reveal">
+        <span class="text-accent text-xs font-bold tracking-widest uppercase mb-3 block">08 / RECOGNITION</span>
+        <h2 class="text-3xl md:text-4xl font-serif font-bold text-neutral-900 dark:text-white">Credentials & Accolades</h2>
+      </div>
+
+      <!-- Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Award 1 -->
+        <div class="glass p-8 rounded-3xl flex items-start space-x-6 hover:border-accent/30 transition-colors duration-300 reveal">
+          <div class="text-accent text-3xl mt-1">
+            <i class="fa-solid fa-trophy"></i>
+          </div>
+          <div>
+            <h3 class="font-serif font-bold text-neutral-900 dark:text-white">Red Dot Design Award</h3>
+            <p class="text-xs text-accent uppercase font-bold tracking-wider mt-1">Winner (2025)</p>
+            <p class="text-xs text-neutral-500 dark:text-neutral-400 font-light mt-2">Awarded for high-end luxury cosmetic packaging branding.</p>
+          </div>
+        </div>
+
+        <!-- Award 2 -->
+        <div class="glass p-8 rounded-3xl flex items-start space-x-6 hover:border-accent/30 transition-colors duration-300 reveal">
+          <div class="text-accent text-3xl mt-1">
+            <i class="fa-solid fa-award"></i>
+          </div>
+          <div>
+            <h3 class="font-serif font-bold text-neutral-900 dark:text-white">Behance Ribbon Badge</h3>
+            <p class="text-xs text-accent uppercase font-bold tracking-wider mt-1">Branding Featured (2024)</p>
+            <p class="text-xs text-neutral-500 dark:text-neutral-400 font-light mt-2">Selected for the Elysian real estate stationary packaging case study.</p>
+          </div>
+        </div>
+
+        <!-- Award 3 -->
+        <div class="glass p-8 rounded-3xl flex items-start space-x-6 hover:border-accent/30 transition-colors duration-300 reveal">
+          <div class="text-accent text-3xl mt-1">
+            <i class="fa-solid fa-certificate"></i>
+          </div>
+          <div>
+            <h3 class="font-serif font-bold text-neutral-900 dark:text-white">Google UX Certified</h3>
+            <p class="text-xs text-accent uppercase font-bold tracking-wider mt-1">Professional UX (2023)</p>
+            <p class="text-xs text-neutral-500 dark:text-neutral-400 font-light mt-2">Advanced credentials in complex web application interface structuring.</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Section 12: Testimonials Section (Carousel) -->
+  <section class="py-24 md:py-32 overflow-hidden">
+    <div class="max-w-4xl mx-auto px-6 text-center relative reveal">
+      <span class="text-accent text-xs font-bold tracking-widest uppercase mb-3 block">09 / REVIEWS</span>
+      <h2 class="text-3xl md:text-4xl font-serif font-bold text-neutral-900 dark:text-white mb-12">Client Appreciations</h2>
+      
+      <!-- Slider Wrapper -->
+      <div class="relative min-h-[220px]">
+        <!-- Slide 1 -->
+        <div class="testimonial-slide opacity-100 transition-all duration-700 ease-in-out absolute inset-0">
+          <p class="text-lg md:text-xl font-serif italic text-neutral-700 dark:text-neutral-300 leading-relaxed font-light">
+            "Shuvro has a unique capability to distil a brand to its absolute core. The packaging bottle design he structured for our botanical oil lines was both timeless and highly commercial."
+          </p>
+          <div class="mt-8">
+            <p class="text-sm font-bold uppercase tracking-wider text-neutral-900 dark:text-white">Isabella Vande</p>
+            <p class="text-[10px] uppercase text-neutral-400 dark:text-neutral-500 tracking-widest">Co-Founder, Noir Botanical Labs</p>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="testimonial-slide opacity-0 pointer-events-none transition-all duration-700 ease-in-out absolute inset-0">
+          <p class="text-lg md:text-xl font-serif italic text-neutral-700 dark:text-neutral-300 leading-relaxed font-light">
+            "The corporate rebranding he delivered for Elysian was stellar. His typographic precision and material guidelines helped us position our real estate portfolios to high-net-worth investors seamlessly."
+          </p>
+          <div class="mt-8">
+            <p class="text-sm font-bold uppercase tracking-wider text-neutral-900 dark:text-white">Marcus Vance</p>
+            <p class="text-[10px] uppercase text-neutral-400 dark:text-neutral-500 tracking-widest">Director, Elysian Real Estate Group</p>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="testimonial-slide opacity-0 pointer-events-none transition-all duration-700 ease-in-out absolute inset-0">
+          <p class="text-lg md:text-xl font-serif italic text-neutral-700 dark:text-neutral-300 leading-relaxed font-light">
+            "An outstanding designer who commands grid structures and font kerning at a master level. The dark-mode app design he structured exceeded our functional requirements entirely."
+          </p>
+          <div class="mt-8">
+            <p class="text-sm font-bold uppercase tracking-wider text-neutral-900 dark:text-white">Liam Mercer</p>
+            <p class="text-[10px] uppercase text-neutral-400 dark:text-neutral-500 tracking-widest">Tech Lead, Apex Trading Co.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonial navigation buttons -->
+      <div class="flex items-center justify-center space-x-6 mt-8">
+        <button id="prev-testimonial" class="w-10 h-10 rounded-full border border-neutral-300 dark:border-neutral-800 hover:border-accent hover:text-accent flex items-center justify-center transition-all duration-300">
+          <i class="fa-solid fa-chevron-left text-xs"></i>
+        </button>
+        
+        <!-- Slider Indicators/Dots -->
+        <div class="flex space-x-2">
+          <span class="testimonial-dot w-2 h-2 rounded-full bg-accent cursor-pointer"></span>
+          <span class="testimonial-dot w-2 h-2 rounded-full bg-neutral-300 dark:bg-neutral-800 cursor-pointer"></span>
+          <span class="testimonial-dot w-2 h-2 rounded-full bg-neutral-300 dark:bg-neutral-800 cursor-pointer"></span>
+        </div>
+
+        <button id="next-testimonial" class="w-10 h-10 rounded-full border border-neutral-300 dark:border-neutral-800 hover:border-accent hover:text-accent flex items-center justify-center transition-all duration-300">
+          <i class="fa-solid fa-chevron-right text-xs"></i>
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Section 13: YouTube Section -->
+  <section class="py-24 md:py-32 bg-neutral-100/30 dark:bg-neutral-950/10 border-y border-neutral-200 dark:border-neutral-900">
+    <div class="max-w-7xl mx-auto px-6 md:px-12">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Text -->
+        <div class="lg:col-span-5 reveal-left">
+          <span class="text-accent text-xs font-bold tracking-widest uppercase mb-3 block">10 / EDUCATION</span>
+          <h2 class="text-3xl md:text-4xl font-serif font-bold text-neutral-900 dark:text-white mb-6 leading-tight">
+            Sharing Design Wisdom
+          </h2>
+          <p class="text-base text-neutral-600 dark:text-neutral-400 font-light leading-relaxed mb-6">
+            I host weekly design reviews, detailing Swiss grids, logo drafts, packaging die-lines, and responsive Figma workflows. Follow along for in-depth design methodologies.
+          </p>
+          
+          <div class="flex items-center space-x-6">
+            <div>
+              <p class="text-2xl font-serif font-bold text-neutral-900 dark:text-white">45K+</p>
+              <p class="text-[9px] uppercase tracking-widest text-neutral-400 dark:text-neutral-500 font-bold">Subscribers</p>
+            </div>
+            <div class="border-l border-neutral-300 dark:border-neutral-800 h-8"></div>
+            <div>
+              <p class="text-2xl font-serif font-bold text-neutral-900 dark:text-white">120+</p>
+              <p class="text-[9px] uppercase tracking-widest text-neutral-400 dark:text-neutral-500 font-bold">Tutorials</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Video Player Mockup -->
+        <div class="lg:col-span-7 reveal-right">
+          <div class="relative rounded-3xl overflow-hidden shadow-2xl group cursor-pointer aspect-video bg-neutral-950 border border-neutral-800">
+            <!-- Overlay and Play trigger -->
+            <div class="absolute inset-0 bg-neutral-950/40 group-hover:bg-neutral-950/20 transition-colors duration-300 z-10 flex items-center justify-center">
+              <a href="https://www.youtube.com" target="_blank" rel="noopener" class="w-16 h-16 rounded-full bg-accent/90 text-neutral-950 flex items-center justify-center shadow-2xl hover:scale-110 hover:bg-accent transition-all duration-300 z-20">
+                <i class="fa-solid fa-play text-xl ml-1"></i>
+              </a>
+            </div>
+            <!-- Video Thumbnail (reusing branding for premium look) -->
+            <img src="assets/ui_ux_design.jpg" alt="Design Tutorial Cover" class="w-full h-full object-cover grayscale group-hover:grayscale-0 scale-100 group-hover:scale-105 transition-all duration-700">
+            
+            <div class="absolute bottom-5 left-5 right-5 z-20 flex justify-between items-center bg-black/60 p-4 rounded-xl backdrop-blur-md">
+              <div>
+                <p class="text-[10px] uppercase font-bold text-accent tracking-widest">Tutorial Episode 82</p>
+                <p class="text-white text-xs font-semibold mt-1">Mastering Swiss Grids in Luxury Brands</p>
+              </div>
+              <span class="text-white/60 text-[10px] font-mono"><i class="fa-regular fa-clock mr-1"></i> 18:42</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 14: Behance & Dribbble Section -->
+  <section class="py-24 md:py-32">
+    <div class="max-w-7xl mx-auto px-6 md:px-12">
+      
+      <!-- Stats block -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16 text-center reveal">
+        <div class="glass p-8 rounded-3xl border border-black/5 dark:border-white/5">
+          <p class="text-accent text-3xl mb-3"><i class="fa-brands fa-behance"></i></p>
+          <p class="text-2xl md:text-3xl font-serif font-bold text-neutral-900 dark:text-white">180K+</p>
+          <p class="text-[9px] tracking-widest text-neutral-400 dark:text-neutral-500 uppercase font-bold mt-1">Behance Appreciations</p>
+        </div>
+        <div class="glass p-8 rounded-3xl border border-black/5 dark:border-white/5">
+          <p class="text-accent text-3xl mb-3"><i class="fa-brands fa-dribbble"></i></p>
+          <p class="text-2xl md:text-3xl font-serif font-bold text-neutral-900 dark:text-white">92K+</p>
+          <p class="text-[9px] tracking-widest text-neutral-400 dark:text-neutral-500 uppercase font-bold mt-1">Dribbble Likes</p>
+        </div>
+        <div class="glass p-8 rounded-3xl border border-black/5 dark:border-white/5">
+          <p class="text-accent text-3xl mb-3"><i class="fa-solid fa-network-wired"></i></p>
+          <p class="text-2xl md:text-3xl font-serif font-bold text-neutral-900 dark:text-white">12K+</p>
+          <p class="text-[9px] tracking-widest text-neutral-400 dark:text-neutral-500 uppercase font-bold mt-1">Interactive Follows</p>
+        </div>
+      </div>
+
+      <!-- Quick grid link -->
+      <div class="flex flex-col items-center text-center max-w-xl mx-auto reveal">
+        <h3 class="text-2xl font-serif font-bold text-neutral-900 dark:text-white mb-4">View Extended Design Archives</h3>
+        <p class="text-xs text-neutral-500 dark:text-neutral-400 font-light leading-relaxed mb-6">
+          I host experimental sketches, mobile app wireframes, structural box tests, and detailed letterform studies on secondary design portals.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a href="https://www.behance.net" target="_blank" rel="noopener" class="px-6 py-3 bg-neutral-900 hover:bg-accent text-white hover:text-neutral-950 dark:bg-white dark:hover:bg-accent dark:text-neutral-950 dark:hover:text-neutral-950 text-xs font-bold tracking-widest uppercase rounded-full transition-all duration-300">
+            Follow on Behance
+          </a>
+          <a href="https://dribbble.com" target="_blank" rel="noopener" class="px-6 py-3 bg-transparent border border-neutral-300 dark:border-neutral-800 hover:border-accent hover:text-accent text-xs font-bold tracking-widest uppercase rounded-full transition-all duration-300">
+            Browse Dribbble shots
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Section 15: Pricing Section -->
+  <section id="pricing" class="py-24 md:py-32 bg-neutral-100/30 dark:bg-neutral-950/10 border-y border-neutral-200 dark:border-neutral-900">
+    <div class="max-w-7xl mx-auto px-6 md:px-12">
+      
+      <!-- Section Header -->
+      <div class="flex flex-col items-center text-center mb-16 reveal">
+        <span class="text-accent text-xs font-bold tracking-widest uppercase mb-3 block">11 / INVESTMENT</span>
+        <h2 class="text-3xl md:text-4xl font-serif font-bold text-neutral-900 dark:text-white mb-6">Honest Design Investment</h2>
+        
+        <!-- Toggle button -->
+        <div class="flex items-center space-x-3 bg-neutral-200/50 dark:bg-neutral-900/50 p-1 rounded-full text-[10px] font-bold uppercase tracking-wider">
+          <button id="price-monthly" class="px-4 py-2 rounded-full bg-accent text-neutral-950 transition-all duration-300">Monthly</button>
+          <button id="price-annual" class="px-4 py-2 rounded-full text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-all duration-300">Annual (20% Save)</button>
+        </div>
+      </div>
+
+      <!-- Pricing Columns -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Tier 1 -->
+        <div class="glass p-8 rounded-3xl border border-black/5 dark:border-white/5 relative flex flex-col justify-between reveal">
+          <div>
+            <span class="text-xs font-bold text-neutral-400 tracking-widest uppercase block mb-1">STORYTELLER</span>
+            <h3 class="text-xl font-serif font-bold text-neutral-900 dark:text-white mb-4">Aesthetic Consultation</h3>
+            
+            <div class="mb-6">
+              <span class="text-3xl md:text-4xl font-serif font-bold text-neutral-900 dark:text-white" data-monthly="950" data-annual="760">$950</span>
+              <span class="text-xs text-neutral-400 uppercase tracking-widest">/ Project</span>
+            </div>
+            <p class="text-xs text-neutral-500 dark:text-neutral-400 font-light mb-6">
+              Perfect for startup brands needing professional direction, typographic adjustments, and design audit documentation.
+            </p>
+            <ul class="space-y-3.5 text-xs font-light text-neutral-600 dark:text-neutral-400 mb-8">
+              <li><i class="fa-solid fa-check text-accent mr-2"></i> 2h Collaborative Video Consultation</li>
+              <li><i class="fa-solid fa-check text-accent mr-2"></i> Typography & Color Palette Prescriptions</li>
+              <li><i class="fa-solid fa-check text-accent mr-2"></i> Comprehensive Positioning Audit Report</li>
+              <li><i class="fa-solid fa-check text-accent mr-2"></i> Vector Logo Review</li>
+            </ul>
+          </div>
+          <a href="#contact" class="w-full text-center py-3 border border-neutral-300 dark:border-neutral-800 hover:border-accent hover:text-accent text-[10px] font-bold uppercase tracking-widest rounded-full transition-all duration-300">
+            Select Consultation
+          </a>
+        </div>
+
+        <!-- Tier 2 (Featured) -->
+        <div class="glass p-8 rounded-3xl border-2 border-accent relative flex flex-col justify-between shadow-2xl reveal">
+          <span class="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 bg-accent text-neutral-950 text-[9px] uppercase font-bold tracking-widest rounded-full">MOST REQUESTED</span>
+          <div>
+            <span class="text-xs font-bold text-neutral-400 tracking-widest uppercase block mb-1">ARCHITECT</span>
+            <h3 class="text-xl font-serif font-bold text-neutral-900 dark:text-white mb-4">Core Branding Suite</h3>
+            
+            <div class="mb-6">
+              <span class="text-3xl md:text-4xl font-serif font-bold text-neutral-900 dark:text-white" data-monthly="3200" data-annual="2560">$3,200</span>
+              <span class="text-xs text-neutral-400 uppercase tracking-widest">/ Project</span>
+            </div>
+            <p class="text-xs text-neutral-500 dark:text-neutral-400 font-light mb-6">
+              Establish a complete luxury identity system. Monograms, packaging templates, editorial stationery assets.
+            </p>
+            <ul class="space-y-3.5 text-xs font-light text-neutral-600 dark:text-neutral-400 mb-8">
+              <li><i class="fa-solid fa-check text-accent mr-2"></i> Bespoke Monogram / Vector Logo Suite</li>
+              <li><i class="fa-solid fa-check text-accent mr-2"></i> Letterhead, Envelope, Cards Design</li>
+              <li><i class="fa-solid fa-check text-accent mr-2"></i> High-End Box / Flask Label Templates</li>
+              <li><i class="fa-solid fa-check text-accent mr-2"></i> 32-Page Typography Guideline Book</li>
+              <li><i class="fa-solid fa-check text-accent mr-2"></i> Complete Brand Vector Package</li>
+            </ul>
+          </div>
+          <a href="#contact" class="w-full text-center py-3 bg-accent text-neutral-950 hover:bg-accent-dark text-[10px] font-bold uppercase tracking-widest rounded-full transition-all duration-300 shadow-md">
+            Begin Branding Project
+          </a>
+        </div>
+
+        <!-- Tier 3 -->
+        <div class="glass p-8 rounded-3xl border border-black/5 dark:border-white/5 relative flex flex-col justify-between reveal">
+          <div>
+            <span class="text-xs font-bold text-neutral-400 tracking-widest uppercase block mb-1">EMPEROR</span>
+            <h3 class="text-xl font-serif font-bold text-neutral-900 dark:text-white mb-4">Ultimate Design Suite</h3>
+            
+            <div class="mb-6">
+              <span class="text-3xl md:text-4xl font-serif font-bold text-neutral-900 dark:text-white" data-monthly="6500" data-annual="5200">$6,500</span>
+              <span class="text-xs text-neutral-400 uppercase tracking-widest">/ Project</span>
+            </div>
+            <p class="text-xs text-neutral-500 dark:text-neutral-400 font-light mb-6">
+              Full corporate brand deployment. Incorporates comprehensive stationery, packaging mockup renders, and Figma app UI design.
+            </p>
+            <ul class="space-y-3.5 text-xs font-light text-neutral-600 dark:text-neutral-400 mb-8">
+              <li><i class="fa-solid fa-check text-accent mr-2"></i> Custom Typographic Branding System</li>
+              <li><i class="fa-solid fa-check text-accent mr-2"></i> 3D Custom Bottle / Packaging Design Renders</li>
+              <li><i class="fa-solid fa-check text-accent mr-2"></i> Figma Interactive UI/UX Mobile Dashboard</li>
+              <li><i class="fa-solid fa-check text-accent mr-2"></i> Print Vendor Sourcing & Quality Control</li>
+              <li><i class="fa-solid fa-check text-accent mr-2"></i> 6-Month Visual Strategy Advisory</li>
+            </ul>
+          </div>
+          <a href="#contact" class="w-full text-center py-3 border border-neutral-300 dark:border-neutral-800 hover:border-accent hover:text-accent text-[10px] font-bold uppercase tracking-widest rounded-full transition-all duration-300">
+            Select Ultimate Suite
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Section 16: FAQ Section -->
+  <section id="faq" class="py-24 md:py-32">
+    <div class="max-w-4xl mx-auto px-6 md:px-12">
+      
+      <!-- FAQ title -->
+      <div class="text-center max-w-2xl mx-auto mb-16 reveal">
+        <span class="text-accent text-xs font-bold tracking-widest uppercase mb-3 block">12 / INQUIRIES</span>
+        <h2 class="text-3xl md:text-4xl font-serif font-bold text-neutral-900 dark:text-white">Frequently Asked Questions</h2>
+      </div>
+
+      <!-- FAQ Accordions -->
+      <div class="space-y-4">
+        
+        <!-- Accordion 1 -->
+        <div class="glass rounded-2xl border border-black/5 dark:border-white/5 overflow-hidden transition-colors duration-300 hover:border-accent/25 reveal">
+          <button class="faq-btn w-full px-6 py-5 flex items-center justify-between text-left focus:outline-none" aria-expanded="false">
+            <span class="text-sm font-serif font-semibold text-neutral-900 dark:text-white">What is your typical project timeline?</span>
+            <span class="faq-icon text-accent text-xs transition-transform duration-300"><i class="fa-solid fa-plus"></i></span>
+          </button>
+          <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+            <div class="px-6 pb-5 pt-1 text-xs text-neutral-600 dark:text-neutral-400 font-light leading-relaxed">
+              Timelines vary based on package scope. Consulting projects take 1–2 weeks, standard branding projects take 4–6 weeks, and full-scale corporate UI/UX and packaging architectures take 8–12 weeks. I maintain a slow, quality-first workload.
+            </div>
+          </div>
+        </div>
+
+        <!-- Accordion 2 -->
+        <div class="glass rounded-2xl border border-black/5 dark:border-white/5 overflow-hidden transition-colors duration-300 hover:border-accent/25 reveal">
+          <button class="faq-btn w-full px-6 py-5 flex items-center justify-between text-left focus:outline-none" aria-expanded="false">
+            <span class="text-sm font-serif font-semibold text-neutral-900 dark:text-white">Do you handle code implementation/development?</span>
+            <span class="faq-icon text-accent text-xs transition-transform duration-300"><i class="fa-solid fa-plus"></i></span>
+          </button>
+          <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+            <div class="px-6 pb-5 pt-1 text-xs text-neutral-600 dark:text-neutral-400 font-light leading-relaxed">
+              I specialize primarily in brand architecture and UI/UX styling design. For final web development (React, NextJS, Shopify systems), I collaborate directly with elite development agencies, supervising the execution to ensure design-perfect accuracy.
+            </div>
+          </div>
+        </div>
+
+        <!-- Accordion 3 -->
+        <div class="glass rounded-2xl border border-black/5 dark:border-white/5 overflow-hidden transition-colors duration-300 hover:border-accent/25 reveal">
+          <button class="faq-btn w-full px-6 py-5 flex items-center justify-between text-left focus:outline-none" aria-expanded="false">
+            <span class="text-sm font-serif font-semibold text-neutral-900 dark:text-white">How do you manage revisions?</span>
+            <span class="faq-icon text-accent text-xs transition-transform duration-300"><i class="fa-solid fa-plus"></i></span>
+          </button>
+          <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+            <div class="px-6 pb-5 pt-1 text-xs text-neutral-600 dark:text-neutral-400 font-light leading-relaxed">
+              Branding and UI packages include 3 revision rounds. Because my discovery phase is highly rigorous, the initial creative directions are closely aligned with your brand strategy, reducing the need for extensive adjustments.
+            </div>
+          </div>
+        </div>
+
+        <!-- Accordion 4 -->
+        <div class="glass rounded-2xl border border-black/5 dark:border-white/5 overflow-hidden transition-colors duration-300 hover:border-accent/25 reveal">
+          <button class="faq-btn w-full px-6 py-5 flex items-center justify-between text-left focus:outline-none" aria-expanded="false">
+            <span class="text-sm font-serif font-semibold text-neutral-900 dark:text-white">What formats are delivered at project launch?</span>
+            <span class="faq-icon text-accent text-xs transition-transform duration-300"><i class="fa-solid fa-plus"></i></span>
+          </button>
+          <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+            <div class="px-6 pb-5 pt-1 text-xs text-neutral-600 dark:text-neutral-400 font-light leading-relaxed">
+              I deliver all vector source formats (.AI, .EPS, .SVG, .PDF), print-ready die-line specifications, Pantone color matching logs, interactive Figma prototype links, and a comprehensive typography guideline document.
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Section 17: Blog Preview Section -->
+  <section id="blog" class="py-24 md:py-32 bg-neutral-100/30 dark:bg-neutral-950/10 border-y border-neutral-200 dark:border-neutral-900">
+    <div class="max-w-7xl mx-auto px-6 md:px-12">
+      
+      <!-- Header -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 reveal">
+        <div>
+          <span class="text-accent text-xs font-bold tracking-widest uppercase mb-3 block">13 / ESSAYS</span>
+          <h2 class="text-3xl md:text-4xl font-serif font-bold text-neutral-900 dark:text-white">Design Journal</h2>
+        </div>
+        <a href="#contact" class="text-xs font-bold uppercase tracking-widest text-accent hover:text-accent-dark transition-colors duration-300 mt-4 md:mt-0">
+          Subscribe to Journal <i class="fa-solid fa-arrow-right ml-2 text-[10px]"></i>
+        </a>
+      </div>
+
+      <!-- Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Post 1 -->
+        <article class="group rounded-3xl overflow-hidden glass shadow-md hover:-translate-y-1 transition-all duration-300 reveal">
+          <div class="relative overflow-hidden aspect-[16/10] bg-neutral-200 dark:bg-neutral-900">
+            <img src="assets/print_poster.jpg" alt="Typography post" class="w-full h-full object-cover grayscale group-hover:grayscale-0 scale-100 group-hover:scale-105 transition-all duration-700">
+            <span class="absolute top-4 left-4 z-20 px-3 py-1 bg-black/60 text-accent text-[9px] uppercase tracking-widest font-bold rounded-full backdrop-blur-md">Theory</span>
+          </div>
+          <div class="p-6">
+            <span class="text-[9px] text-neutral-400 font-bold uppercase tracking-widest block mb-2">June 24, 2026</span>
+            <h3 class="text-lg font-serif font-bold text-neutral-900 dark:text-white mb-3 group-hover:text-accent transition-colors duration-300">
+              The Return of Serif Typefaces in Luxury Digital Portals
+            </h3>
+            <p class="text-xs text-neutral-500 dark:text-neutral-400 font-light leading-relaxed mb-4">
+              Exploring why high-end fashion and automotive houses are shifting away from generic sans-serif fonts back to custom serif identities.
+            </p>
+            <span class="text-xs font-bold uppercase tracking-widest text-neutral-900 dark:text-white group-hover:underline cursor-pointer">
+              Read Essay <i class="fa-solid fa-chevron-right ml-1 text-[8px]"></i>
+            </span>
+          </div>
+        </article>
+
+        <!-- Post 2 -->
+        <article class="group rounded-3xl overflow-hidden glass shadow-md hover:-translate-y-1 transition-all duration-300 reveal">
+          <div class="relative overflow-hidden aspect-[16/10] bg-neutral-200 dark:bg-neutral-900">
+            <img src="assets/packaging_design.jpg" alt="Packaging post" class="w-full h-full object-cover grayscale group-hover:grayscale-0 scale-100 group-hover:scale-105 transition-all duration-700">
+            <span class="absolute top-4 left-4 z-20 px-3 py-1 bg-black/60 text-accent text-[9px] uppercase tracking-widest font-bold rounded-full backdrop-blur-md">Tactility</span>
+          </div>
+          <div class="p-6">
+            <span class="text-[9px] text-neutral-400 font-bold uppercase tracking-widest block mb-2">June 12, 2026</span>
+            <h3 class="text-lg font-serif font-bold text-neutral-900 dark:text-white mb-3 group-hover:text-accent transition-colors duration-300">
+              Eco-Luxury: Fusing Recyclable Materials with Premium Finishes
+            </h3>
+            <p class="text-xs text-neutral-500 dark:text-neutral-400 font-light leading-relaxed mb-4">
+              How to maintain embossed gold-foil and rich paper textures while utilizing 100% biodegradable structural board guidelines.
+            </p>
+            <span class="text-xs font-bold uppercase tracking-widest text-neutral-900 dark:text-white group-hover:underline cursor-pointer">
+              Read Essay <i class="fa-solid fa-chevron-right ml-1 text-[8px]"></i>
+            </span>
+          </div>
+        </article>
+
+        <!-- Post 3 -->
+        <article class="group rounded-3xl overflow-hidden glass shadow-md hover:-translate-y-1 transition-all duration-300 reveal">
+          <div class="relative overflow-hidden aspect-[16/10] bg-neutral-200 dark:bg-neutral-900">
+            <img src="assets/ui_ux_design.jpg" alt="UI post" class="w-full h-full object-cover grayscale group-hover:grayscale-0 scale-100 group-hover:scale-105 transition-all duration-700">
+            <span class="absolute top-4 left-4 z-20 px-3 py-1 bg-black/60 text-accent text-[9px] uppercase tracking-widest font-bold rounded-full backdrop-blur-md">Interactive</span>
+          </div>
+          <div class="p-6">
+            <span class="text-[9px] text-neutral-400 font-bold uppercase tracking-widest block mb-2">May 29, 2026</span>
+            <h3 class="text-lg font-serif font-bold text-neutral-900 dark:text-white mb-3 group-hover:text-accent transition-colors duration-300">
+              Designing Digital Silence: The Power of Extreme Whitespace
+            </h3>
+            <p class="text-xs text-neutral-500 dark:text-neutral-400 font-light leading-relaxed mb-4">
+              Why luxury e-commerce interfaces should feel like physical art galleries, prioritizing visual breathing room over dense catalog grids.
+            </p>
+            <span class="text-xs font-bold uppercase tracking-widest text-neutral-900 dark:text-white group-hover:underline cursor-pointer">
+              Read Essay <i class="fa-solid fa-chevron-right ml-1 text-[8px]"></i>
+            </span>
+          </div>
+        </article>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Section 18: Contact Form Section -->
+  <section id="contact" class="py-24 md:py-32 relative">
+    
+    <div class="max-w-7xl mx-auto px-6 md:px-12">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+        
+        <!-- Left details -->
+        <div class="lg:col-span-5 reveal-left">
+          <span class="text-accent text-xs font-bold tracking-widest uppercase mb-3 block">14 / ENQUIRIES</span>
+          <h2 class="text-3xl md:text-4xl xl:text-5xl font-serif font-bold text-neutral-900 dark:text-white mb-8 leading-tight">
+            Initiate your brand <br>
+            <span class="text-accent italic font-normal">transformation</span>.
+          </h2>
+          <p class="text-base text-neutral-600 dark:text-neutral-400 font-light leading-relaxed mb-8">
+            Are you ready to elevate your brand position, redesign custom cosmetic packaging, or layout a responsive web application? Let's discuss your targets.
+          </p>
+          
+          <!-- Contact Detail Cards -->
+          <div class="space-y-6">
+            <div class="flex items-center space-x-4">
+              <div class="w-10 h-10 rounded-full bg-neutral-200/50 dark:bg-neutral-900/50 flex items-center justify-center text-accent text-sm">
+                <i class="fa-regular fa-envelope"></i>
+              </div>
+              <div>
+                <p class="text-[9px] uppercase tracking-wider text-neutral-400 font-bold">Studio Mail</p>
+                <a href="mailto:studio@alexandresterling.com" class="text-sm font-semibold hover:text-accent transition-colors duration-300">studio@alexandresterling.com</a>
+              </div>
+            </div>
+
+            <div class="flex items-center space-x-4">
+              <div class="w-10 h-10 rounded-full bg-neutral-200/50 dark:bg-neutral-900/50 flex items-center justify-center text-accent text-sm">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <div>
+                <p class="text-[9px] uppercase tracking-wider text-neutral-400 font-bold">Studio Headquarters</p>
+                <p class="text-sm font-semibold">Bahnhofstrasse 45, 8001 Zurich, CH</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Contact Form -->
+        <div class="lg:col-span-7 reveal-right">
+          <div class="glass p-8 md:p-12 rounded-[2rem] border border-black/5 dark:border-white/5 relative">
+            
+            <form id="portfolio-contact-form" class="space-y-6">
+              
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <!-- Name -->
+                <div class="form-group relative z-0 w-full mb-6">
+                  <input type="text" name="name" id="contact-name" placeholder=" " required class="block py-3 px-0 w-full text-sm text-neutral-900 bg-transparent border-0 border-b border-neutral-300 dark:border-neutral-800 dark:text-white focus:outline-none focus:ring-0 focus:border-accent transition-colors duration-300">
+                  <label for="contact-name" class="absolute text-neutral-400 text-sm duration-300 transform -translate-y-4 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 pointer-events-none transition-all">Your Name *</label>
+                </div>
+                <!-- Email -->
+                <div class="form-group relative z-0 w-full mb-6">
+                  <input type="email" name="email" id="contact-email" placeholder=" " required class="block py-3 px-0 w-full text-sm text-neutral-900 bg-transparent border-0 border-b border-neutral-300 dark:border-neutral-800 dark:text-white focus:outline-none focus:ring-0 focus:border-accent transition-colors duration-300">
+                  <label for="contact-email" class="absolute text-neutral-400 text-sm duration-300 transform -translate-y-4 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 pointer-events-none transition-all">Your Email *</label>
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <!-- Project Type Selection -->
+                <div class="form-group relative z-0 w-full mb-6">
+                  <select name="project_type" id="contact-project" required class="block py-3 px-0 w-full text-sm text-neutral-900 bg-transparent border-0 border-b border-neutral-300 dark:border-neutral-800 dark:text-white focus:outline-none focus:ring-0 focus:border-accent transition-colors duration-300 select-none">
+                    <option value="" disabled selected class="dark:bg-darkBg"></option>
+                    <option value="branding" class="dark:bg-darkBg">Branding & Logo Systems</option>
+                    <option value="packaging" class="dark:bg-darkBg">Couture Packaging</option>
+                    <option value="uiux" class="dark:bg-darkBg">Interactive UI/UX Design</option>
+                    <option value="print" class="dark:bg-darkBg">Print & Editorial</option>
+                    <option value="consulting" class="dark:bg-darkBg">Aesthetic Audit</option>
+                  </select>
+                  <label for="contact-project" class="absolute text-neutral-400 text-sm duration-300 transform -translate-y-4 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 pointer-events-none transition-all">Project Type *</label>
+                </div>
+                <!-- Budget Range -->
+                <div class="form-group relative z-0 w-full mb-6">
+                  <select name="budget" id="contact-budget" required class="block py-3 px-0 w-full text-sm text-neutral-900 bg-transparent border-0 border-b border-neutral-300 dark:border-neutral-800 dark:text-white focus:outline-none focus:ring-0 focus:border-accent transition-colors duration-300">
+                    <option value="" disabled selected class="dark:bg-darkBg"></option>
+                    <option value="consult" class="dark:bg-darkBg">$950 (Consultation)</option>
+                    <option value="branding" class="dark:bg-darkBg">$2k - $5k (Branding)</option>
+                    <option value="full" class="dark:bg-darkBg">$5k - $10k (Full Suite)</option>
+                    <option value="enterprise" class="dark:bg-darkBg">$10k+ (Enterprise System)</option>
+                  </select>
+                  <label for="contact-budget" class="absolute text-neutral-400 text-sm duration-300 transform -translate-y-4 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 pointer-events-none transition-all">Investment Range *</label>
+                </div>
+              </div>
+
+              <!-- Message -->
+              <div class="form-group relative z-0 w-full mb-8">
+                <textarea name="message" id="contact-message" placeholder=" " rows="4" required class="block py-3 px-0 w-full text-sm text-neutral-900 bg-transparent border-0 border-b border-neutral-300 dark:border-neutral-800 dark:text-white focus:outline-none focus:ring-0 focus:border-accent transition-colors duration-300 resize-none"></textarea>
+                <label for="contact-message" class="absolute text-neutral-400 text-sm duration-300 transform -translate-y-4 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 pointer-events-none transition-all">Describe your targets *</label>
+              </div>
+
+              <!-- Submit button -->
+              <button type="submit" class="w-full py-4 bg-accent hover:bg-accent-dark text-neutral-950 font-bold tracking-widest text-xs uppercase rounded-full shadow-lg shadow-accent/15 transition-all duration-300 hover:scale-[1.01]">
+                Transmit Brief <i class="fa-solid fa-paper-plane ml-2"></i>
+              </button>
+
+            </form>
+
+            <!-- Success notification toast (hidden by default) -->
+            <div id="contact-success-toast" class="absolute inset-0 bg-neutral-950/95 rounded-[2rem] flex flex-col items-center justify-center text-center p-8 opacity-0 pointer-events-none transition-all duration-500 z-30">
+              <div class="w-16 h-16 rounded-full bg-accent/20 border border-accent/40 flex items-center justify-center text-accent text-3xl mb-6 animate-float">
+                <i class="fa-solid fa-circle-check"></i>
+              </div>
+              <h3 class="text-2xl font-serif font-bold text-white mb-2">Brief Transmitted</h3>
+              <p class="text-xs text-neutral-400 max-w-sm font-light mb-6">
+                Your specifications have been logged securely. Shuvro Dev will contact you via email in 24–48 hours.
+              </p>
+              <button id="toast-close-btn" class="px-6 py-2 border border-accent text-accent hover:bg-accent hover:text-neutral-950 text-[10px] font-bold uppercase tracking-widest rounded-full transition-all duration-300">
+                Dismiss
+              </button>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 19: Footer -->
+  <footer class="bg-neutral-100 dark:bg-neutral-950 border-t border-neutral-200 dark:border-neutral-900 pt-16 pb-12 transition-colors duration-500">
+    <div class="max-w-7xl mx-auto px-6 md:px-12">
+      
+      <!-- Footer grid -->
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-12 pb-12 border-b border-neutral-200 dark:border-neutral-900">
+        
+        <!-- Logo and Intro -->
+        <div class="md:col-span-5 space-y-5">
+          <a href="#" class="text-2xl font-serif font-bold tracking-widest text-neutral-950 dark:text-white">DESIGNER SHUVRO</a>
+          <p class="text-xs text-neutral-500 dark:text-neutral-400 font-light leading-relaxed max-w-sm">
+            Shuvro Dev is a luxury graphic designer and creative brand architect based in Zurich, configuring typography, custom boxes, and interactive UI systems since 2018.
+          </p>
+          <!-- Social links -->
+          <div class="flex space-x-5 text-neutral-500">
+            <a href="#" class="hover:text-accent transition-colors duration-300" aria-label="Instagram"><i class="fa-brands fa-instagram text-lg"></i></a>
+            <a href="#" class="hover:text-accent transition-colors duration-300" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in text-lg"></i></a>
+            <a href="#" class="hover:text-accent transition-colors duration-300" aria-label="Behance"><i class="fa-brands fa-behance text-lg"></i></a>
+            <a href="#" class="hover:text-accent transition-colors duration-300" aria-label="Dribbble"><i class="fa-brands fa-dribbble text-lg"></i></a>
+            <a href="#" class="hover:text-accent transition-colors duration-300" aria-label="Twitter"><i class="fa-brands fa-x-twitter text-lg"></i></a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="md:col-span-3 space-y-4">
+          <h4 class="text-xs font-bold uppercase tracking-wider text-neutral-900 dark:text-white">Studio Indices</h4>
+          <ul class="space-y-2 text-xs font-light text-neutral-500 dark:text-neutral-400">
+            <li><a href="#about" class="hover:text-accent transition-colors duration-300">About Narrative</a></li>
+            <li><a href="#services" class="hover:text-accent transition-colors duration-300">Services Index</a></li>
+            <li><a href="#works" class="hover:text-accent transition-colors duration-300">Works Gallery</a></li>
+            <li><a href="#process" class="hover:text-accent transition-colors duration-300">Design Process</a></li>
+            <li><a href="#pricing" class="hover:text-accent transition-colors duration-300">Pricing Suite</a></li>
+          </ul>
+        </div>
+
+        <!-- Extra details -->
+        <div class="md:col-span-4 space-y-4">
+          <h4 class="text-xs font-bold uppercase tracking-wider text-neutral-900 dark:text-white">Working Hours</h4>
+          <ul class="space-y-2 text-xs font-light text-neutral-500 dark:text-neutral-400">
+            <li>Monday — Friday: 09:00 - 18:00 (CET)</li>
+            <li>Saturday & Sunday: Closed / Design Studies</li>
+            <li>Zurich, Switzerland</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Legal and Back to top -->
+      <div class="flex flex-col sm:flex-row items-center justify-between pt-8 text-[10px] text-neutral-400 font-light">
+        <p>&copy; 2026 Shuvro Dev (Designer Shuvro). Fictional Portfolio Architecture. Made with Antigravity AI.</p>
+        
+        <div class="flex items-center space-x-6 mt-4 sm:mt-0">
+          <a href="#" class="hover:text-accent transition-colors duration-300">Privacy Policy</a>
+          <a href="#" class="hover:text-accent transition-colors duration-300">Terms of Service</a>
+          <!-- Scroll to top icon -->
+          <a href="#" class="w-8 h-8 rounded-full bg-neutral-200 dark:bg-neutral-900 flex items-center justify-center hover:bg-accent hover:text-neutral-950 transition-colors duration-300" aria-label="Scroll back to top">
+            <i class="fa-solid fa-arrow-up text-xs"></i>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Lightbox Modal Component -->
+  <div id="lightbox" class="opacity-0 pointer-events-none transition-all duration-300 bg-black/95 fixed inset-0 z-50 flex items-center justify-center p-4">
+    <!-- Lightbox Close trigger -->
+    <button id="lightbox-close" class="absolute top-6 right-6 text-white hover:text-accent text-3xl focus:outline-none" aria-label="Close image display">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+    <div class="max-w-4xl w-full flex flex-col items-center">
+      <img id="lightbox-img" src="" alt="Lightbox image" class="max-h-[70vh] object-contain rounded-xl shadow-2xl">
+      <div class="mt-6 text-center max-w-xl">
+        <h3 id="lightbox-title" class="text-white font-serif text-xl font-bold">Project Display</h3>
+        <p id="lightbox-desc" class="text-neutral-400 text-xs font-light mt-2 leading-relaxed">Description details log</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Javascript Core Logic -->
+  <script>
+    // ----------------------------------------------------
+    // Theme Toggle Functionality
+    // ----------------------------------------------------
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    const htmlEl = document.documentElement;
+
+    // Load initial theme state
+    if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      htmlEl.classList.add('dark');
+      htmlEl.classList.remove('light');
+    } else {
+      htmlEl.classList.remove('dark');
+      htmlEl.classList.add('light');
+    }
+
+    themeToggleBtn.addEventListener('click', () => {
+      if (htmlEl.classList.contains('dark')) {
+        htmlEl.classList.remove('dark');
+        htmlEl.classList.add('light');
+        localStorage.setItem('color-theme', 'light');
+      } else {
+        htmlEl.classList.remove('light');
+        htmlEl.classList.add('dark');
+        localStorage.setItem('color-theme', 'dark');
+      }
+    });
+
+    // ----------------------------------------------------
+    // Sticky Navbar Glass Effect
+    // ----------------------------------------------------
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 40) {
+        navbar.classList.add('glass', 'shadow-md', 'py-3');
+        navbar.classList.remove('py-5', 'border-transparent');
+        navbar.classList.add('border-black/5', 'dark:border-white/5');
+      } else {
+        navbar.classList.remove('glass', 'shadow-md', 'py-3');
+        navbar.classList.add('py-5', 'border-transparent');
+        navbar.classList.remove('border-black/5', 'dark:border-white/5');
+      }
+    });
+
+    // ----------------------------------------------------
+    // Mobile Navigation Menu Toggle
+    // ----------------------------------------------------
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileCloseBtn = document.getElementById('mobile-close-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+
+    function openMobileMenu() {
+      mobileMenu.classList.remove('opacity-0', 'pointer-events-none');
+      mobileMenu.querySelector('.h-full').classList.remove('translate-x-full');
+    }
+
+    function closeMobileMenu() {
+      mobileMenu.classList.add('opacity-0', 'pointer-events-none');
+      mobileMenu.querySelector('.h-full').classList.add('translate-x-full');
+    }
+
+    mobileMenuBtn.addEventListener('click', openMobileMenu);
+    mobileCloseBtn.addEventListener('click', closeMobileMenu);
+    mobileMenu.addEventListener('click', (e) => {
+      if (e.target === mobileMenu) closeMobileMenu();
+    });
+    mobileLinks.forEach(link => link.addEventListener('click', closeMobileMenu));
+
+    // ----------------------------------------------------
+    // Typing interaction in Hero
+    // ----------------------------------------------------
+    const words = ["BRAND ARCHITECT", "PACKAGING DESIGNER", "CREATIVE DIRECTOR"];
+    let wordIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    const typedTextEl = document.getElementById('typed-text');
+
+    function typeEffect() {
+      const currentWord = words[wordIndex];
+      if (isDeleting) {
+        typedTextEl.textContent = currentWord.substring(0, charIndex - 1);
+        charIndex--;
+      } else {
+        typedTextEl.textContent = currentWord.substring(0, charIndex + 1);
+        charIndex++;
+      }
+
+      let speed = isDeleting ? 40 : 100;
+
+      if (!isDeleting && charIndex === currentWord.length) {
+        speed = 2200; // Hold typed word
+        isDeleting = true;
+      } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        wordIndex = (wordIndex + 1) % words.length;
+        speed = 500; // Pause before typing next
+      }
+
+      setTimeout(typeEffect, speed);
+    }
+    document.addEventListener('DOMContentLoaded', () => setTimeout(typeEffect, 1000));
+
+    // ----------------------------------------------------
+    // Intersection Observer for Scroll Reveals
+    // ----------------------------------------------------
+    const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+    const skillBars = document.querySelectorAll('.skill-progress-bar');
+    const counters = document.querySelectorAll('.counter');
+
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+          // If skills enter viewport, animate width
+          if (entry.target.id === 'skills') {
+            skillBars.forEach(bar => {
+              bar.style.width = bar.getAttribute('data-width');
+            });
+          }
+          // If about section enters viewport, trigger counters
+          if (entry.target.id === 'about') {
+            counters.forEach(counter => animateCounter(counter));
+          }
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.12,
+      rootMargin: '0px 0px -50px 0px'
+    });
+
+    revealElements.forEach(el => revealObserver.observe(el));
+    // Specifically observe sections hosting skills/counters to trigger animations
+    const skillsSection = document.getElementById('skills');
+    const aboutSection = document.getElementById('about');
+    if (skillsSection) revealObserver.observe(skillsSection);
+    if (aboutSection) revealObserver.observe(aboutSection);
+
+    // Counter counting function
+    function animateCounter(counterEl) {
+      const target = +counterEl.getAttribute('data-target');
+      const speed = target > 50 ? 2500 / target : 150;
+      let count = 0;
+
+      const updateCount = () => {
+        const increment = Math.ceil(target / 45);
+        if (count < target) {
+          count += increment;
+          if (count > target) count = target;
+          counterEl.textContent = count;
+          setTimeout(updateCount, speed);
+        } else {
+          counterEl.textContent = target;
+        }
+      };
+      updateCount();
+    }
+
+    // ----------------------------------------------------
+    // Portfolio Filtering Systems
+    // ----------------------------------------------------
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const galleryItems = document.querySelectorAll('.gallery-item');
+
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        // Toggle Active button class
+        filterButtons.forEach(b => b.classList.remove('active', 'bg-accent', 'text-neutral-950'));
+        filterButtons.forEach(b => b.classList.add('text-neutral-500'));
+        btn.classList.add('active', 'bg-accent', 'text-neutral-950');
+        btn.classList.remove('text-neutral-500');
+
+        const filterVal = btn.getAttribute('data-filter');
+
+        galleryItems.forEach(item => {
+          const category = item.getAttribute('data-category');
+          if (filterVal === 'all' || category === filterVal) {
+            item.classList.remove('hidden');
+            setTimeout(() => {
+              item.style.opacity = '1';
+              item.style.transform = 'scale(1)';
+            }, 50);
+          } else {
+            item.style.opacity = '0';
+            item.style.transform = 'scale(0.92)';
+            setTimeout(() => {
+              item.classList.add('hidden');
+            }, 300);
+          }
+        });
+      });
+    });
+
+    // ----------------------------------------------------
+    // Lightbox Functionality
+    // ----------------------------------------------------
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxTitle = document.getElementById('lightbox-title');
+    const lightboxDesc = document.getElementById('lightbox-desc');
+    const lightboxClose = document.getElementById('lightbox-close');
+
+    // Trigger details modal for projects
+    const detailTriggers = document.querySelectorAll('.project-details-btn, .lightbox-trigger');
+
+    detailTriggers.forEach(trigger => {
+      trigger.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const imgUrl = trigger.getAttribute('data-image');
+        const title = trigger.getAttribute('data-title');
+        const desc = trigger.getAttribute('data-desc');
+
+        lightboxImg.src = imgUrl;
+        lightboxTitle.textContent = title;
+        lightboxDesc.textContent = desc;
+
+        lightbox.classList.remove('opacity-0', 'pointer-events-none');
+      });
+    });
+
+    function closeLightbox() {
+      lightbox.classList.add('opacity-0', 'pointer-events-none');
+    }
+
+    lightboxClose.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox || e.target === lightbox.querySelector('.max-w-4xl')) {
+        closeLightbox();
+      }
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeLightbox();
+    });
+
+    // ----------------------------------------------------
+    // Testimonial Carousel Controller
+    // ----------------------------------------------------
+    const slides = document.querySelectorAll('.testimonial-slide');
+    const dots = document.querySelectorAll('.testimonial-dot');
+    const prevBtn = document.getElementById('prev-testimonial');
+    const hoverNextBtn = document.getElementById('next-testimonial');
+    let currentSlide = 0;
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        if (i === index) {
+          slide.classList.remove('opacity-0', 'pointer-events-none');
+          slide.classList.add('opacity-100');
+          dots[i].classList.add('bg-accent');
+          dots[i].classList.remove('bg-neutral-300', 'dark:bg-neutral-800');
+        } else {
+          slide.classList.add('opacity-0', 'pointer-events-none');
+          slide.classList.remove('opacity-100');
+          dots[i].classList.remove('bg-accent');
+          dots[i].classList.add('bg-neutral-300', 'dark:bg-neutral-800');
+        }
+      });
+      currentSlide = index;
+    }
+
+    prevBtn.addEventListener('click', () => {
+      let index = currentSlide - 1;
+      if (index < 0) index = slides.length - 1;
+      showSlide(index);
+    });
+
+    hoverNextBtn.addEventListener('click', () => {
+      let index = (currentSlide + 1) % slides.length;
+      showSlide(index);
+    });
+
+    dots.forEach((dot, i) => {
+      dot.addEventListener('click', () => showSlide(i));
+    });
+
+    // Auto rotate testimonials
+    let testimonialTimer = setInterval(() => {
+      let index = (currentSlide + 1) % slides.length;
+      showSlide(index);
+    }, 7000);
+
+    // Pause timer on button interaction
+    [prevBtn, hoverNextBtn, ...dots].forEach(el => {
+      el.addEventListener('click', () => clearInterval(testimonialTimer));
+    });
+
+    // ----------------------------------------------------
+    // Pricing Annually vs Monthly Toggles
+    // ----------------------------------------------------
+    const priceMonthlyBtn = document.getElementById('price-monthly');
+    const priceAnnualBtn = document.getElementById('price-annual');
+    const priceTextEls = document.querySelectorAll('[data-monthly]');
+
+    function togglePricing(annual) {
+      if (annual) {
+        priceAnnualBtn.classList.add('bg-accent', 'text-neutral-950');
+        priceAnnualBtn.classList.remove('text-neutral-500');
+        priceMonthlyBtn.classList.remove('bg-accent', 'text-neutral-950');
+        priceMonthlyBtn.classList.add('text-neutral-500');
+        
+        priceTextEls.forEach(el => {
+          const annualVal = el.getAttribute('data-annual');
+          el.textContent = '$' + Number(annualVal).toLocaleString();
+        });
+      } else {
+        priceMonthlyBtn.classList.add('bg-accent', 'text-neutral-950');
+        priceMonthlyBtn.classList.remove('text-neutral-500');
+        priceAnnualBtn.classList.remove('bg-accent', 'text-neutral-950');
+        priceAnnualBtn.classList.add('text-neutral-500');
+
+        priceTextEls.forEach(el => {
+          const monthlyVal = el.getAttribute('data-monthly');
+          el.textContent = '$' + Number(monthlyVal).toLocaleString();
+        });
+      }
+    }
+
+    priceMonthlyBtn.addEventListener('click', () => togglePricing(false));
+    priceAnnualBtn.addEventListener('click', () => togglePricing(true));
+
+    // ----------------------------------------------------
+    // FAQ Accordion Logics
+    // ----------------------------------------------------
+    const faqButtons = document.querySelectorAll('.faq-btn');
+
+    faqButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        const content = btn.nextElementSibling;
+        const icon = btn.querySelector('.faq-icon i');
+
+        // Close all other FAQs
+        faqButtons.forEach(otherBtn => {
+          if (otherBtn !== btn) {
+            otherBtn.setAttribute('aria-expanded', 'false');
+            otherBtn.nextElementSibling.style.maxHeight = '0px';
+            otherBtn.querySelector('.faq-icon i').className = 'fa-solid fa-plus';
+          }
+        });
+
+        // Toggle self
+        btn.setAttribute('aria-expanded', !expanded);
+        if (!expanded) {
+          content.style.maxHeight = content.scrollHeight + 'px';
+          icon.className = 'fa-solid fa-minus';
+        } else {
+          content.style.maxHeight = '0px';
+          icon.className = 'fa-solid fa-plus';
+        }
+      });
+    });
+
+    // ----------------------------------------------------
+    // Contact Form submission Mockup
+    // ----------------------------------------------------
+    const contactForm = document.getElementById('portfolio-contact-form');
+    const successToast = document.getElementById('contact-success-toast');
+    const toastCloseBtn = document.getElementById('toast-close-btn');
+
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      // Show success overlay with smooth anims
+      successToast.classList.remove('opacity-0', 'pointer-events-none');
+      successToast.classList.add('opacity-100');
+    });
+
+    toastCloseBtn.addEventListener('click', () => {
+      successToast.classList.add('opacity-0', 'pointer-events-none');
+      successToast.classList.remove('opacity-100');
+      contactForm.reset();
+    });
+
+  </script>
+</body>
+</html>
